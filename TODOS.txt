@@ -1,0 +1,2 @@
+1. learn about integrating bootstrap in angular project -- thru angular.json 
+2. 
