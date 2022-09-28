@@ -1,0 +1,47 @@
+<div class="container-fluid mt-3">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" data-bs-toggle="tab" data-bs-target="#basic-databinding" role="tab"
+        aria-controls="basic-databinding" aria-selected="true">Basic Data Binding</a>
+      <a class="nav-item nav-link" data-bs-toggle="tab" data-bs-target="#cpb-databinding" role="tab"
+        aria-controls="cpb-databinding" aria-selected="true">Custom Property Binding</a>
+      <a class="nav-item nav-link" data-bs-toggle="tab" data-bs-target="#ceb-databinding" role="tab"
+        aria-controls="ceb-databinding" aria-selected="true">Custom Event Binding</a>
+      <a class="nav-item nav-link" data-bs-toggle="tab" data-bs-target="#directives-tab" role="tab"
+        aria-controls="directives-tab" aria-selected="false">Directives</a>
+      <a class="nav-item nav-link" data-bs-toggle="tab" data-bs-target="#pipes-tab" role="tab" aria-controls="pipes-tab"
+        aria-selected="false">Pipes</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+
+    <div class="tab-pane fade show active" id="basic-databinding" role="tabpanel"
+      aria-labelledby="basic-databinding-tab">
+      <h2>Basic Data Binding</h2>
+      <h3>Interpolation</h3>
+      <p>App Name: {{appName}}</p>
+      <!-- <input type="text" value="{{}}"/>
+      <div title="{{companyName}}">
+        Mouseover to see the Cognizant's Employee Count
+      </div> -->
+
+    </div>
+
+    <div class="tab-pane fade" id="cpb-databinding" role="tabpanel" aria-labelledby="cpb-databinding-tab">
+      <h2>Parent to Child Comp Communication using Custom Property Binding </h2>
+    </div>
+
+    <div class="tab-pane fade" id="ceb-databinding" role="tabpanel" aria-labelledby="ceb-databinding-tab">
+      <h2>Child to Parent Comp Communication using Custom Event Binding</h2>
+    </div>
+
+    <div class="tab-pane fade" id="directives-tab" role="tabpanel" aria-labelledby="directives-tab">
+      <h2>Directives</h2>
+    </div>
+
+    <div class="tab-pane fade" id="pipes-tab" role="tabpanel" aria-labelledby="pipes-tab">
+      <h2>Pipes</h2>
+    </div>
+
+  </div>
+</div>

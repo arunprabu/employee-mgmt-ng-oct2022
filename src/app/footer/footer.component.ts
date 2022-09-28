@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -10,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
           <a class="nav-link" href="#">Back to Top</a>
         </li>
       </app-menu>
-      <p>Copyright 2022 | Arun</p>
+      <p class="yellowBg">Copyright 2022 | Arun</p>
     </footer>
   `,
   styles: [
+    `
+      .yellowBg {
+        background: yellow;
+      }
+    `
   ]
 })
 export class FooterComponent implements OnInit {

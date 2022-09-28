@@ -23,6 +23,9 @@ Angular
 Building Blocks 
 --
   Components
+    HTML 
+    CSS 
+    TS 
   Directives 
   Services
   Classes/Models 
@@ -38,7 +41,7 @@ Building Blocks
 Concepts
 --
   Data Binding 
-  Routing 
+  Routing [DONE]
   Dependency Injection 
   RxJS/Observables
   Subscription 
@@ -90,4 +93,61 @@ Project Structure
       ...
       ...
 
+
+Routing 
+---
+
+  Single Page Apps 
+  --
+    7 Characteristics 
+    ---
+      1. Pages should not refresh [DONE]
+      2. URL should change [DONE]
+      3. History should be maintained [DONE]
+      4. Header and footer should be intact [DONE]
+      5. Section in between header and footer should be updated [DONE]
+      6. Active menu should be set [TODO]
+      7. Page Title should also be set [TODO]
+    
+  ---
+    Step 0: 
+      Identify the URLs and matching components 
+
+        localhost:4200/           - HomeComponent 
+        localhost:4200/concepts   - ConceptsComponent 
+        localhost:4200/about      - AboutComponent 
+
+    Step 1:
+    --  
+      LEt's setup the URLs in menu.comp.html 
+
+    Step 2: 
+    =----
+      Let's create the components. 
+        ng g c home -t -s 
+        ng g c concepts -s 
+        ng g c about -s 
+
+    Step 3: 
+    --
+      Let's check the app. The URLs are not stable. 
+
+      Let's config the routes in app-routing.module.ts 
+
+    Step 4: 
+    --
+      Let's check the app. The URLs are stable. But the comp is not loaded in b/w header and footer
+
+      In app.comp.html in between header and footer, let's load the config comps. 
+
+      <router-outlet></router-outlet>
+
+    Step 5: 
+    ---
+      Let's check the app. Pages are refreshed. Let's fix it. 
+
+      in menu.comp.html -- replace all href to routerLink 
+
+
+---
 

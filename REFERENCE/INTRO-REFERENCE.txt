@@ -111,8 +111,8 @@ Single Page Apps
     3. History should be maintained 
     4. Header and footer should be intact 
     5. Section in between header and footer should be updated 
-    6. Active menu should be set 
-    7. Page Title should also be set 
+    6. Active menu should be set [TODO]
+    7. Page Title should also be set [TODO]
   
 ---
 SPA Frameworks / Library

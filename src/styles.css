@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* app-wide css */
+/* right place for you to override bootstrap styles */
+
+.highlight{
+  color: red;
+}
