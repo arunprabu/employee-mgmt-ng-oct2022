@@ -1,0 +1,4 @@
+1. learn about integrating bootstrap in angular project -- thru angular.json 
+2. implement 'conditional content projection in angular' / conditional transclusion / multi-slot content projection 
+    display login and signup in header as last menu items 
+    display back to top in footer as first menu item 

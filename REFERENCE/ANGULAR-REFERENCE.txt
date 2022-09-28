@@ -1,0 +1,93 @@
+
+Angular 
+---
+  To create Angular Project -- you need Angular CLI  
+  npm i @angular/cli -g 
+
+  Angular 2   - 2016  - CLI Version 1.2.x 
+  Angular 4   - 2017  - CLI Version 1.4.x 
+  Angular 5   - 2017  - CLI Version 1.6.x 
+
+  Angular 6   - 2018  - CLI Version 6.x  (ng cli followed semver)
+  Angular 7   - 2018  - CLI Version 7.x 
+  Angular 8   - 2019  - CLI Version 8.x 
+  Angular 9   - 2020  - CLI Version 9.x 
+  Angular 10  - 2020  - CLI Version 10.x  
+  Angular 11  - 2020  - CLI Version 11.x 
+  Angular 12  - 2021  - CLI Version 12.x 
+  Angular 13  - 2021  - CLI Version 13.x 
+  Angular 14  - 2022  - CLI Version 14.x 
+  Angular 15  - 2022  - CLI Version 15.x (due by nov/dec 2022)
+
+
+Building Blocks 
+--
+  Components
+  Directives 
+  Services
+  Classes/Models 
+  Interfaces 
+
+  Guards
+  Pipes 
+  Modules 
+  Interceptors 
+
+---
+
+Concepts
+--
+  Data Binding 
+  Routing 
+  Dependency Injection 
+  RxJS/Observables
+  Subscription 
+
+  Unit Testing 
+
+  Internationalization (i18n)
+  ng animations 
+  
+--
+NgRx - Framework 
+---
+
+
+
+Employee Management App 
+--
+  Add New Employee 
+  List Employees 
+  Employee Details 
+  Update Employee 
+  Delete Employee 
+
+---
+Thinking in Angular 
+  1. Identify the number of components 
+  2. Identify the hierarchy of components 
+---
+
+
+Project Structure
+--
+  src/
+    app/ 
+      header/
+        ...
+        ...
+        ...
+        ...
+      footer/
+        ... ts 
+        ... spec.ts 
+      menu/
+        ...
+        ...
+        ...
+      ...
+      ...
+      ...
+      ...
+
+

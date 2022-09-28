@@ -1,0 +1,355 @@
+Angular 
+---
+  Hands-on 
+  ---
+    CRUD App with Authentication 
+
+    Explain => Coding => Demo => TRY IT OUT => [TINY TODOS]
+
+  Outcome: 
+  --
+    Advanced Angular Developers 
+
+  
+  Softwares Required
+  --
+    NodeJS v 16+ 
+    Visual Studio Code Editor 
+    Browser (except IE)
+
+
+  Skillset Required
+  ---
+    * Webapps [DONE]
+    * ES2015 [DONE]
+    * TypeScript [DONE]
+    * NodeJS Ecosystem (30 mins)
+
+---
+  Summary
+  --
+    Mixed set 
+    No Back End Exp 
+    almost all have ng exp 
+    all have Js exp 
+
+----
+
+Webapps 
+---
+  2 Types 
+  ---
+  1. Server Side Rendering Apps (SSR Apps) 
+    * Pages will reload/refresh upon link click
+
+    Arch
+    --
+      1 Server 
+        
+    Codebase 
+    ----
+      Front End (HTML, CSS, JS) + Back End (PHP) + DB Queries
+
+    How it works?
+    --
+      Response: HTML, CSS, JS, Data
+
+    Disadv 
+    --
+      1. Server has to do the heavy-lifting 
+      2. Slowers Webapps 
+      3. Bad User Experience 
+      4. Higher Bandwidth Consumption 
+      5. Expensive 
+      6. Unorganized Codebase 
+          
+
+  2. Client Side Rendering Apps (CSR Apps = SPA + Rest API)
+    * Pages will not reload/refresh upon link click
+
+    Arch
+    --
+      2 Server 
+        1 Server for Front End App (customer facing app)
+        1 Server for Back End App 
+
+    Codebase 
+    ----
+      Front End App (HTML, CSS, JS)
+      Back End App (PHP + DB Queries)  
+
+    How it works?
+    --
+      1 Server for Front End App [Single Page App = SPA] 
+        Response: HTML, CSS, JS, Wait for Data
+
+        Using SPA Library/Frameworks: ReactJS / Angular 2+ / VueJS / Svelte
+    
+      1 Server for Back End App [RESTful API]
+        Response: Data (JSON) 
+
+        Using Java+Springboot/NodeJS+ExpresssJS/...
+      
+    Adv 
+        --
+          1. Server's workload is shared
+          2. Faster Webapps 
+          3. Better User Experience 
+          4. Less Bandwidth Consumption 
+          5. Not Expensive 
+          6. Organized Codebase 
+          
+        
+
+
+Single Page Apps 
+--
+  7 Characteristics 
+  ---
+    1. Pages should not refresh 
+    2. URL should change 
+    3. History should be maintained 
+    4. Header and footer should be intact 
+    5. Section in between header and footer should be updated 
+    6. Active menu should be set 
+    7. Page Title should also be set 
+  
+---
+SPA Frameworks / Library
+--  
+  #1 ReactJS (library)
+  #2 VueJS (framework)
+  #3 Angular (framework)
+  
+Browser
+---
+  HTML Renderer  
+  CSS Parser 
+  JS Engine 
+
+
+ECMAScript 2015
+---
+  ECMAScript 
+  --
+    * standard 
+    * grammar for interaction layer 
+    * Implementations: JavaScript, ActionScript, Google AppsScript 
+
+  Before June 2015
+  --  
+    JS was not object-oriented 
+
+  Since June 2015 (from ES2015)
+  ---
+    Js has become object-oriented 
+    (class, extends, import, export)
+    * many features 
+
+    
+    
+---
+TypeScript 
+--
+  TS = JS + Data Typing 
+
+
+  Types of Languages (around datatype)
+  ---
+    1. Strictly-Typed Languages / Strongly-Typed programming 
+        Examples: Java, C#, TypeScript 
+        Primitive DataTypes: int, float, boolean and many more ... 
+
+        Syntax:
+        ---
+          int n = 10; // valid 
+          n = 100; // valid 
+          n = 100000; // valid 
+          n = true; // error 
+
+          String myName = 'Arun';
+          myName = 'John'; // valid 
+          myName = 100; // error 
+
+          boolean isAuth = false;
+          isAuth = true; // valid 
+          isAuth = 'test'; // error 
+
+    2. Loosely-Typed Languages
+        Examples: JavaScript, PHP, Python 
+
+        Syntax
+        ---
+          var x = 'Arun'; // valid 
+          x = 10; // valid
+          x = true; // valid 
+          x = []; // valid 
+          x = {};  // valid 
+          x = undefined; // valid
+          x = null; // valid 
+          x = function(){ // valid 
+
+          }
+
+
+ 
+  Data Types in JS 
+  ---
+    Primitive Datatypes (7): 
+      string, number, boolean, undefined, null, symbol (ES2015), big int (ES2017) 
+
+    Reference Types:
+      Object, Array, RegExp
+
+  ---
+
+  TypeScript 
+  --
+    Syntax 
+    ------
+      1. Explicit Datatyping 
+        var x: string = 'Arun'; // valid 
+        x = 'John'; // valid 
+        x = 10; // error 
+        x = true; // error
+
+      2. Implicit DataTyping / Type Inference 
+        var y = 20; // valid
+        y = 100; // valid  
+        y = 'Arun'; // error
+        y = true; // error 
+
+
+      'Any' Type Syntax 
+      ---
+        var a: any = 10;  // valid 
+        a = 'Arun'; // valid 
+        a = true;  // valid 
+
+        var z;  // has implicit type of 'any' 
+        z = 'Arun'; // valid 
+        z = 10; // valid 
+        z = true; // valid 
+
+---
+  TypeScript Compiler (tsc)
+  ---
+    TS => (TSC) => JS 
+
+---
+Arrays & Objects 
+--  
+  var colors1 = ['red', 'green']; // implicit 
+  var colors2: string[] = ['red', 'green'];
+  var colors3: Array<string> = ['red', 'green'];
+
+  var myProfile1 = {
+    name: 'Arun',
+    city: 'Chennai'
+  }
+
+  var myProfile2: {name: string, city: string} = {
+    name: 'Arun',
+    city: 'Chennai'
+  }
+
+---
+  // Type Aliases -- Custom Types 
+
+    type Employee = {
+        id: number,
+        name: string,
+        phone: string | number, // union type
+        email: string,
+        exp?: number // optional
+    }
+
+    var employee: Employee = {
+        id: 12112,
+        name: 'Peter',
+        phone: '+91-23723233232',
+        email: 'p@q.com'
+    }
+
+    employee.exp = 20;
+    employee.company = 'CTS' ; // error
+
+  ----
+  
+Classes  in TS 
+--
+  class Car {
+    // public variable
+    make = '';
+    model = '';
+    fuel = '';
+
+    // private variable
+    private x = 100;
+    
+    constructor(_make: string, _model: string, _fuel: string){
+      this.make = _make;
+      this.model = _model;
+      this.fuel = _fuel;
+    }
+    
+    // public method
+    getRating(score: number){
+    console.log(this.make + ' ' + this.model + ' has ' + score + ' Rating score');
+    }
+
+    private dealerInfo(){ // private method
+      console.log('will fetch dealer info');
+    }
+  }
+
+  // We need to create an obj for class Car 
+  let car1: Car = new Car('Honda', 'City', 'Diesel'); // instantiation params
+  car1.getRating(4.2);
+
+  let car2: Car = new Car('Hyundai', 'Verna', 'Petrol');
+  car2.getRating(4.3);
+
+  let car3: Car = new Car('BMW', 'i8', 'Petrol');
+  car3.getRating(4.6);
+
+
+
+NPM Dependencies
+--
+  1. Project Dependencies 
+      * some packages are needed for the app's functionality
+      * will be part of prod build 
+
+      Examples: bootstrap, dropzone, jquery, datatables, @angular/core, react, vue
+
+      npm i bootstrap  (or)
+      npm i bootstrap --save (or)
+      npm i bootstrap -S 
+
+      "dependencies" : {
+        "bootstrap": "5.2.0"
+      }
+
+  2. Dev Dependencies
+      * some packages are needed for the app to be developed 
+      * during dev we need some packages 
+      * for us to better, smoother dev workflow 
+
+      Examples: typescript, webpack, sass, less, jasmine, karma 
+
+      npm i webpack --save-dev (or)
+      npm i webpack -D 
+
+      "devDependencies" : {
+        "webpack": "4.8.0"
+      }
+
+  3. Global Dependencies 
+      * will be installed system wide 
+
+      Examples: nodemon, typescript, mocha, @angular/cli 
+
+      npm i @angular/cli -g (or)
+      npm i @angular/cli --global (or)
+
