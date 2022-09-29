@@ -20,11 +20,28 @@
       <h2>Basic Data Binding</h2>
       <h3>Interpolation</h3>
       <p>App Name: {{appName}}</p>
-      <!-- <input type="text" value="{{}}"/>
-      <div title="{{companyName}}">
+      <input type="text" value="{{companyProfile.name}}"/>
+      <div title="{{companyProfile.employeesCount}}">
         Mouseover to see the Cognizant's Employee Count
-      </div> -->
+      </div>
 
+      <hr>
+      <h3>Property Binding</h3>
+      Team Size: <input type="text" [value]="teamSize">
+      <div [title]="teamSize" >
+        Mouseover to see the Team Size
+      </div>
+
+      <hr>
+      <h3>Event Binding</h3>
+      <button (click)="handleClickMe($event.target)">Click Me</button>
+
+      <hr>
+      <h3>Two Way Binding</h3>
+      <p>{{courseName}}</p>
+      <input type="text" value="{{courseName}}"> <br>
+      <input type="text" [value]="courseName"> <br><br>
+      <input type="text" [(ngModel)]="courseName">
     </div>
 
     <div class="tab-pane fade" id="cpb-databinding" role="tabpanel" aria-labelledby="cpb-databinding-tab">

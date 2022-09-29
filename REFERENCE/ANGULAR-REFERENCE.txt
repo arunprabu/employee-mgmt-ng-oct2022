@@ -30,7 +30,6 @@ Building Blocks
   Services
   Classes/Models 
   Interfaces 
-
   Guards
   Pipes 
   Modules 
@@ -40,6 +39,7 @@ Building Blocks
 
 Concepts
 --
+  ViewEncapsulation [DONE]
   Data Binding 
   Routing [DONE]
   Dependency Injection 
@@ -150,4 +150,28 @@ Routing
 
 
 ---
+
+Coding Practices 
+-------------
+  Casing Types 
+  ------------- 
+    1. PascalCase 
+        * recommended for classes, interfaces (Ex: class Car, interface IUser)
+
+    2. camelCase 
+        * recommended for variables, const, methods 
+        * recommended for attribute directives 
+
+    3. kebab-case
+        * recommended for component selectors (Ex: app-root)
+        * preferred for css classes  (Ex: btn-primary)
+    
+    4. snake_case
+        * never ever use this 
+        * okay for const if architect accepts 
+          (ex: const MAX_CLASSES_PER_STUDENT = 10 )
+          
+
+  -------- 
+
 

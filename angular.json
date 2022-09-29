@@ -101,9 +101,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "employee-mgmt-ng-oct2022"
+  "defaultProject": "employee-mgmt-ng-oct2022",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

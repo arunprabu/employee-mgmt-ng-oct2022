@@ -8,20 +8,33 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class ConceptsComponent implements OnInit {
-
   // public variable
   // interpolation related
-  appName = 'Employee Manager App!';
-  // companyProfile = { 
-  //   name: 'Cognizant',
-  //   employees: 300000
-  // }
+    appName = 'Employee Manager App!';
+  companyProfile = { 
+    name: 'Cognizant',
+    employeesCount: 300000
+  }
+  // property binding related
+  teamSize = 14;
+
+  // two way binding related
+  courseName = 'Angular 13';
 
   constructor() { 
-    
   }
 
   ngOnInit(): void {
+  }
+
+  // event binding related
+  handleClickMe(element: any){
+    console.log(element);
+    // TODO: Disable the button
+    element.disabled = true;
+    // TODO: Change the label to 'Clicked'
+    element.textContent = 'Clicked';
+    alert('clicked');
   }
 
 }
