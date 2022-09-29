@@ -177,3 +177,51 @@ Coding Practices
   -------- 
 
 
+
+
+
+
+
+
+
+Data Binding 
+---
+  comp.TS => comp.HTML 
+
+  1. Interpolation [DONE] 
+      TS => HTML 
+      {{ }}
+
+  2. Property Binding [DONE]
+      TS => HTML 
+      []
+
+  3. Event Binding [DONE]
+      TS <== HTML 
+      ()
+
+  4. Two-Way Binding 
+      TS <=> HTML 
+      [(ngModel)] 
+
+      Note: applicable in form fields
+
+  5. Custom Property Binding 
+
+  6. Custom Event Binding 
+
+
+---
+
+Cross Component Communication
+---------
+  1. Parent to Child Component Communication [DONE]
+      using Custom Property Binding 
+
+  2. Child to Parent Component Communication
+      2.1 using Custom Event Binding (child comp sends data to parent)
+      2.2 using @ViewChild()  (parent comp can access data from child comp)  [TODO]
+
+  3. Any to Any Component Communication
+      Prereq: Services, Dep Inj, RxJS/Observables, Subscription 
+
