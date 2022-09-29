@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ConceptsComponent implements OnInit {
   // public variable
   // interpolation related
-    appName = 'Employee Manager App!';
+  appName = 'Employee Manager App!';
   companyProfile = { 
     name: 'Cognizant',
     employeesCount: 300000
@@ -20,6 +20,9 @@ export class ConceptsComponent implements OnInit {
 
   // two way binding related
   courseName = 'Angular 13';
+
+  // custom property related
+  myAge = 100;
 
   constructor() { 
   }
