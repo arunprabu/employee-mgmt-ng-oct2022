@@ -1,4 +1,5 @@
 <div class="container-fluid mt-3">
+  <p>Data Received From Child Comp : {{dataReceivedFromChildComp?.name}}</p>
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
       <a class="nav-item nav-link active" data-bs-toggle="tab" data-bs-target="#basic-databinding" role="tab"
@@ -56,6 +57,9 @@
 
     <div class="tab-pane fade" id="ceb-databinding" role="tabpanel" aria-labelledby="ceb-databinding-tab">
       <h2>Child to Parent Comp Communication using Custom Event Binding</h2>
+      <!-- Step 4 of CEB: LEt's add an event handler for the custom event-->
+      <app-ceb (profileLoaded)="handleProfileLoaded($event)"></app-ceb> 
+      <!-- Step 5 of CEB: Let's get the data thru $event-->
     </div>
 
     <div class="tab-pane fade" id="directives-tab" role="tabpanel" aria-labelledby="directives-tab">

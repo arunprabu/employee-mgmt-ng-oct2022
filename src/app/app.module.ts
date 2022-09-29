@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ConceptsComponent } from './concepts/concepts.component';
 import { AboutComponent } from './about/about.component';
 import { CpbComponent } from './concepts/components/cpb/cpb.component';
+import { CebComponent } from './concepts/components/ceb/ceb.component';
 
 // Main Switching Box
 @NgModule({
@@ -22,7 +23,8 @@ import { CpbComponent } from './concepts/components/cpb/cpb.component';
     HomeComponent,
     ConceptsComponent,
     AboutComponent,
-    CpbComponent
+    CpbComponent,
+    CebComponent
   ],
   imports: [
     BrowserModule,  

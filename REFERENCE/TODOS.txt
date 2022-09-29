@@ -4,4 +4,5 @@
     display back to top in footer as first menu item 
 
 3. implement active menu in menu.comp.html
-4. 
+4. implement child to parent comp communication using @ViewChild()
+    

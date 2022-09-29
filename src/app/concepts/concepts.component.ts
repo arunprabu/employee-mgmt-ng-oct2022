@@ -24,6 +24,9 @@ export class ConceptsComponent implements OnInit {
   // custom property related
   myAge = 100;
 
+  // custom event binding related
+  dataReceivedFromChildComp: any;
+
   constructor() { 
   }
 
@@ -38,6 +41,13 @@ export class ConceptsComponent implements OnInit {
     // TODO: Change the label to 'Clicked'
     element.textContent = 'Clicked';
     alert('clicked');
+  }
+
+  //Step 6: event handler of the custom event 
+  handleProfileLoaded(event: any){ // Step 7: we receive the data thru event
+    console.log('Inside handleProfileLoaded');
+    console.log(event);
+    this.dataReceivedFromChildComp = event;
   }
 
 }
