@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  featureName = 'About Us';
+
   constructor() { }
 
   ngOnInit(): void {

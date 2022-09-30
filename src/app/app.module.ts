@@ -9,9 +9,10 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { ConceptsComponent } from './concepts/components/concepts.component';
-import { AboutComponent } from './about/about.component';
+import { AboutComponent } from './about/components/about.component';
 import { CpbComponent } from './concepts/components/cpb/cpb.component';
 import { CebComponent } from './concepts/components/ceb/ceb.component';
+import { CalcComponent } from './about/components/calc/calc.component';
 
 // Main Switching Box
 @NgModule({
@@ -24,7 +25,8 @@ import { CebComponent } from './concepts/components/ceb/ceb.component';
     ConceptsComponent,
     AboutComponent,
     CpbComponent,
-    CebComponent
+    CebComponent,
+    CalcComponent
   ],
   imports: [
     BrowserModule,  
