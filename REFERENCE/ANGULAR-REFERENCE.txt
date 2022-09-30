@@ -22,10 +22,12 @@ Angular
 
 Building Blocks 
 --
-  Components
+  Components [DONE]
     HTML 
     CSS 
     TS 
+    SPEC.TS 
+
   Directives 
   Services
   Classes/Models 
@@ -76,21 +78,22 @@ Project Structure
 --
   src/
     app/ 
-      header/
-        ...
-        ...
-        ...
-        ...
-      footer/
-        ... ts 
-        ... spec.ts 
-      menu/
-        ...
-        ...
-        ...
-      concepts/
+      shared/
         components/
-          
+          header/
+            ...
+            ...
+            ...
+            ...
+          footer/
+            ... ts 
+            ... spec.ts 
+          menu/
+            ...
+            ...
+            ...
+      concepts/
+        components/       
       ...
       ...
       ...
@@ -177,13 +180,6 @@ Coding Practices
   -------- 
 
 
-
-
-
-
-
-
-
 Data Binding 
 ---
   comp.TS => comp.HTML 
@@ -208,7 +204,7 @@ Data Binding
 
   5. Custom Property Binding 
       []
-      
+
   6. Custom Event Binding 
       ()
 
@@ -227,3 +223,120 @@ Cross Component Communication
   3. Any to Any Component Communication
       Prereq: Services, Dep Inj, RxJS/Observables, Subscription 
 
+=============
+
+
+
+Project: Calc 
+============
+  Sources: FRD, Use Cases, User Stories
+
+  requirements 
+    design (UI, F/E Arch, B/E Arch, DB Arch Design)
+      development 
+        testing 
+          deployment 
+            maintanance 
+
+dev => qa => (bugs) => dev => qa => (bugs) => dev => qa => (bugs) => dev => qa => (QA PASSES) => Deployment 
+
+Feature: Add 
+====
+  DEVELOPMENT 
+  ====
+    Reference: Test Cases (Requirement Doc)
+      1. add should take in only numbers as inputs 
+      2. add should always return only number as output 
+      3. add button should be disabled if wrong inputs entered 
+
+    function add(a: number, b: number): number{
+      return a + b;
+    }
+
+    add(10, 20);  //30 
+
+    (Testing Tools)
+
+
+Automated Testing 
+=====
+  4 Levels 
+  ---
+    0. Static Type Checking 
+        Tools: TypeScript 
+
+    1. Unit Testing [TO LEARN]
+        * testing tiny independent unit of a component 
+        * writing code to test our comp's code 
+        * testing the comp in isolation without connecting with rest api data
+        * Bug Reduction Density: 40-80% 
+
+        Tools: Jasmine JS, Karma 
+
+    2. Integration Testing 
+        * Different units, modules, or components tested as combined entity 
+        * Behavior of the app would be tested 
+        * Used for exposing issues in the integration of multiple units 
+
+        Example: [testing if a child comp can update parent comp]
+
+        Tools: Jasmine JS, Karma 
+
+    3. End to End Testing (E2E)
+        * Testing the whole app 
+        * usually a multi-step test combining multiple units and integration tests into one big test 
+        * tests are done is simulated browser; there may or may not be UI while the tests are running 
+
+        Tools: Selenium or CypressJS or Protractor or Cucumber or Tosca
+
+  2 Approaches  / Modern software dev methodologies (as of 2022)
+  --
+    dev writes test cases => dev writes fn code => (TOOLS) => instant feedback of success / failure
+
+    1. Test Driven development (TDD)
+        * is a programming Practice that instructs the dev to write NEW CODE only if an automated test has failed 
+
+        dev writes test cases 
+          (Instant Feedback of Failure/bug)
+            dev writes fn code 
+              (Instant Feedback of Success)
+                [CODE COMPLETE]
+
+        Testing Pattern: AAA (Arrange, Act, Assert)
+        Tools: JEST, Mocha, Chai 
+
+
+    2. Behavior Driven development (BDD) [TO LEARN]
+        * is an agile s/w methodology 
+        * an app is documented and designed around the behaviour the end user expects to experience
+
+        dev writes test cases (around the behaviour of the app)
+          (Instant Feedback of Failure/bug)
+            dev writes fn code 
+              (Instant Feedback of Success)
+                [CODE COMPLETE]
+
+        Testing Pattern: Given, When, Then 
+        Tools: Jasmine JS 
+
+    
+  2 Testing Patterns 
+  ---
+    1. AAA (Act, Arrange, Assert)
+    2. Given, When, Then 
+
+  Many Tools 
+  --
+    Jasmine JS  - BDD Testing Framework 
+    Karma JS    - Test Runner 
+
+
+What will you learn? 
+--
+  1. How to write tests?
+  2. Where to write tests?
+  3. How to test our app against the identified test cases?
+
+
+
+====

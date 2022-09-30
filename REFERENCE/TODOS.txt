@@ -5,4 +5,5 @@
 
 3. implement active menu in menu.comp.html
 4. implement child to parent comp communication using @ViewChild()
+5. explore style binding in angular [ngStyle]
     
