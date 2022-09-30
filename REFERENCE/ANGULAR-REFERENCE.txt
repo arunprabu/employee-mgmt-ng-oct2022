@@ -207,8 +207,10 @@ Data Binding
       Note: applicable in form fields
 
   5. Custom Property Binding 
-
+      []
+      
   6. Custom Event Binding 
+      ()
 
 
 ---
