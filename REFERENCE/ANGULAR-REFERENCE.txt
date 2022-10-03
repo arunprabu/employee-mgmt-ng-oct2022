@@ -340,3 +340,32 @@ What will you learn?
 
 
 ====
+
+Directives 
+--
+  * Special Instructions to the DOM 
+  * useful for altering apperance and behvaiour of an existing element
+
+  1. Components -- (are also directives only )
+      Used with a template. This type of directive is the most common directive type.
+
+  2. Attribute Directives 
+      Example: routerLink, routerLinkActive, ngModel, ngClass, ngStyle, ngForm, ngNativeValidate
+
+  3. Structural Directives
+      * the impact will be in structural layer (html)
+      *ngIf, *ngFor, ngSwitch 
+
+  4. Custom Attribute Directives 
+      ng g d concepts/directives/colorizer 
+    
+  5. Custom Structural Directives 
+
+      
+
+
+
+
+
+
+

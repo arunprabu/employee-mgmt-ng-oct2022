@@ -13,6 +13,7 @@ import { AboutComponent } from './about/components/about.component';
 import { CpbComponent } from './concepts/components/cpb/cpb.component';
 import { CebComponent } from './concepts/components/ceb/ceb.component';
 import { CalcComponent } from './about/components/calc/calc.component';
+import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 
 // Main Switching Box
 @NgModule({
@@ -26,7 +27,8 @@ import { CalcComponent } from './about/components/calc/calc.component';
     AboutComponent,
     CpbComponent,
     CebComponent,
-    CalcComponent
+    CalcComponent,
+    ColorizerDirective
   ],
   imports: [
     BrowserModule,  

@@ -6,4 +6,8 @@
 3. implement active menu in menu.comp.html
 4. implement child to parent comp communication using @ViewChild()
 5. explore style binding in angular [ngStyle]
-    
+6. explore *ngIf with else 
+7. explore *ngFor -- find out index and do not display NodeJS 
+8. explore ngSwitch to diplay day 'Sunday' till 'Saturday', and have default case 
+
+
