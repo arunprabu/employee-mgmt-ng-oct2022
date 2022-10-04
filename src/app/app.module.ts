@@ -14,6 +14,7 @@ import { CpbComponent } from './concepts/components/cpb/cpb.component';
 import { CebComponent } from './concepts/components/ceb/ceb.component';
 import { CalcComponent } from './about/components/calc/calc.component';
 import { ColorizerDirective } from './concepts/directives/colorizer.directive';
+import { DemoIfDirective } from './concepts/directives/demo-if.directive';
 
 // Main Switching Box
 @NgModule({
@@ -28,7 +29,8 @@ import { ColorizerDirective } from './concepts/directives/colorizer.directive';
     CpbComponent,
     CebComponent,
     CalcComponent,
-    ColorizerDirective
+    ColorizerDirective,
+    DemoIfDirective
   ],
   imports: [
     BrowserModule,  

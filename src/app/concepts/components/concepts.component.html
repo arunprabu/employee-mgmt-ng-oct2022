@@ -114,6 +114,17 @@
         Random Text...
       </div>
 
+      <h4>Custom Structural Directive - Demo</h4>
+      <div *appDemoIf="isLoggedIn">
+        <div class="alert alert-success">
+          You are logged in
+        </div>
+      </div>
+      <div *appDemoIf="!isLoggedIn">
+        <div class="alert alert-danger">
+          You are logged in
+        </div>
+      </div>
 
     </div>
 
