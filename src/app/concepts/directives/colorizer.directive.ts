@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostListener, HostBinding, Renderer2 } from '@angular/core';
 
 // Decorator
 @Directive({
@@ -7,6 +7,8 @@ import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 export class ColorizerDirective {
 
   divEl: any; 
+
+  @HostBinding('style.border') border!: string;
 
   constructor( private elRef: ElementRef, private renderer: Renderer2) { 
     console.log('Inside Constructor');
@@ -42,6 +44,7 @@ export class ColorizerDirective {
     console.log(targetEl); // will show the element in which the click event occured
     this.renderer.setStyle(targetEl, 'background-color', 'yellow');
     this.renderer.setStyle(targetEl, 'color', '#000');
+    this.border = '5px dashed green';
 
     const newSpan = this.renderer.createElement('span'); //<span></span>
     this.renderer.setStyle(newSpan, 'font-size', '12px');
@@ -50,6 +53,9 @@ export class ColorizerDirective {
     this.renderer.appendChild(this.divEl, newSpan);
   }
 
-  // TODO: work on mouseover -- change bg color to lightgreen 
+  // TODO: work on mouseover -- change bg color to lightgreen
+  
   // TODO: work on mouseout -- change the bg color to red
+
+  // TODO: HostBinding 
 }
