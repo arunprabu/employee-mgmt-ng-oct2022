@@ -9,5 +9,6 @@
 6. explore *ngIf with else 
 7. explore *ngFor -- find out index and do not display NodeJS 
 8. explore ngSwitch to diplay day 'Sunday' till 'Saturday', and have default case 
-9. 
+9. should decrement counterValue correctly in counter comp's unit testing 
+10. should decrement counter and update in html when decrement btn clicked
 

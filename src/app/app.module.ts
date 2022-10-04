@@ -16,6 +16,8 @@ import { CalcComponent } from './about/components/calc/calc.component';
 import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 import { DemoIfDirective } from './concepts/directives/demo-if.directive';
 import { UnlessDirective } from './concepts/directives/unless.directive';
+import { UnitTestingDemoComponent } from './unit-testing-demo/components/unit-testing-demo/unit-testing-demo.component';
+import { CounterComponent } from './unit-testing-demo/components/counter/counter.component';
 
 // Main Switching Box
 @NgModule({
@@ -32,7 +34,9 @@ import { UnlessDirective } from './concepts/directives/unless.directive';
     CalcComponent,
     ColorizerDirective,
     DemoIfDirective,
-    UnlessDirective
+    UnlessDirective,
+    UnitTestingDemoComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,  
