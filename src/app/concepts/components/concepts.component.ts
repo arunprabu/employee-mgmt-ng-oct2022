@@ -28,7 +28,7 @@ export class ConceptsComponent implements OnInit {
   dataReceivedFromChildComp: any;
 
   // for directives
-  isLoggedIn = true;
+  isLoggedIn = false;
   skills = [
     'HTML', 'CSS', 'JS', 'ng', 'NodeJs'
   ];

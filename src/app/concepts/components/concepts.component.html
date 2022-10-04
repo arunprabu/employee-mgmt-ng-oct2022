@@ -114,7 +114,7 @@
         Random Text...
       </div>
 
-      <h4>Custom Structural Directive - Demo</h4>
+      <h4>Custom Structural Directive - Demo of DemoIf</h4>
       <div *appDemoIf="isLoggedIn">
         <div class="alert alert-success">
           You are logged in
@@ -124,6 +124,15 @@
         <div class="alert alert-danger">
           Pls login. 
         </div>
+      </div>
+
+
+      <h4>Custom Structural Directive - Demo of unless</h4>
+      <div *appUnless="isLoggedIn">
+        <button class="btn btn-danger">Logout</button>
+      </div>
+      <div *appUnless="!isLoggedIn">
+        <button class="btn btn-success">Login</button>
       </div>
 
     </div>

@@ -9,8 +9,8 @@ export class DemoIfDirective {
     private viewContainerRef: ViewContainerRef,
     private templateRef: TemplateRef<object>
   ) {
-    console.log(viewContainerRef); // div
-    console.log(templateRef); // p
+    //console.log(viewContainerRef); // div
+    // console.log(templateRef); // p
   }
 
   @Input() set appDemoIf(condition: boolean) {
