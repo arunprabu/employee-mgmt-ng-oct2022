@@ -4,7 +4,7 @@ import { Directive, ElementRef, HostListener, HostBinding, Renderer2 } from '@an
 @Directive({
   selector: '[appColorizer]' // attribute selector
 })
-export class ColorizerDirective {
+export class ColorizerDirective{
 
   divEl: any; 
 
