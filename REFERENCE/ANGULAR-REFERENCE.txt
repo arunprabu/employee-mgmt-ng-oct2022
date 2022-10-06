@@ -338,6 +338,29 @@ What will you learn?
   3. How to test our app against the identified test cases?
 
 
+Unit Testing 
+---
+  Testing Components 
+    TS 
+      variables 
+      methods
+      conditionals 
+    HTML 
+    CSS 
+    Mocks 
+    Spies 
+  
+  Testing Directives (TODO)
+    Mock 
+  Testing Services 
+    Mock
+  Testing Pipes
+    Mock 
+  Testing Router (TODO)
+  Testing Classes (TODO)
+
+
+
 
 ====
 

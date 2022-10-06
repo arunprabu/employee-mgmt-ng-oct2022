@@ -18,6 +18,7 @@ import { DemoIfDirective } from './concepts/directives/demo-if.directive';
 import { UnlessDirective } from './concepts/directives/unless.directive';
 import { UnitTestingDemoComponent } from './unit-testing-demo/components/unit-testing-demo/unit-testing-demo.component';
 import { CounterComponent } from './unit-testing-demo/components/counter/counter.component';
+import { HighlightDirective } from './unit-testing-demo/directives/highlight.directive';
 
 // Main Switching Box
 @NgModule({
@@ -36,7 +37,8 @@ import { CounterComponent } from './unit-testing-demo/components/counter/counter
     DemoIfDirective,
     UnlessDirective,
     UnitTestingDemoComponent,
-    CounterComponent
+    CounterComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,  
