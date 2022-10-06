@@ -11,4 +11,7 @@
 8. explore ngSwitch to diplay day 'Sunday' till 'Saturday', and have default case 
 9. should decrement counterValue correctly in counter comp's unit testing 
 10. should decrement counter and update in html when decrement btn clicked
-
+11. counter should stop at 10 and show Maximum Reached upon increment
+12. counter should stop at 0 and show Minimum Reached upon decrement
+13. testing whether the button elements have css class 'btn' in counter component 
+14. 

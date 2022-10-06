@@ -7,6 +7,7 @@ import { CounterComponent } from './counter.component';
 describe('CounterComponent', () => {
   let component: CounterComponent;
   let fixture: ComponentFixture<CounterComponent>;
+  let wrapper: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -18,6 +19,7 @@ describe('CounterComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CounterComponent);
     component = fixture.componentInstance;
+    wrapper = fixture.nativeElement as HTMLElement;
     fixture.detectChanges();
   });
 
@@ -60,6 +62,26 @@ describe('CounterComponent', () => {
       .nativeElement.innerText;
 
     expect(counterHtmlText).toBe('Counter: 1');
+  });
+
+  // TODO: should decrement counter and update in html when decrement btn clicked
+
+  // TODO: should stop at 10 and show Maximum Reached upon increment
+  
+  // TODO: should stop at 0 and show Minimum Reached upon decrement
+
+  // testing inline styles of html element
+  it('should have red bg color in h2 element', () =>{
+    const bgColor = wrapper.querySelector('h2')?.style.backgroundColor;
+    expect(bgColor).toBe('rgb(255, 0, 0)'); // not recommended to use the exact color name like 'red', 'blue'
+  });
+
+  // TODO: testing whether the button elements have css class 'btn' 
+
+  it('ngOnInit called', () => {
+    spyOn(component, 'ngOnInit').and.callThrough();
+    component.ngOnInit();
+    expect(component.ngOnInit).toHaveBeenCalled();
   });
 
 });

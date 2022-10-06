@@ -9,17 +9,26 @@ import { Component, OnInit } from '@angular/core';
 export class CounterComponent implements OnInit {
 
   counterValue = 0;
+  message = '';
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Inside ngOnInit');
   }
 
   handleIncrement(){
-    this.counterValue++;
+    if(this.counterValue < 10){
+      this.counterValue++;
+      this.message = '';
+    }else{
+      this.message = 'Maximum Reached';
+    }
   }
 
   handleDecrement(){
-    this.counterValue--;
+    if(this.counterValue > 0){
+      this.counterValue--;
+    }
   }
 }

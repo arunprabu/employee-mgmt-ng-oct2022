@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor() { 
+    console.log('Inside constructor');
+  }
 
   ngOnInit(): void {
+    // life cycle hook
+    // when the comp is coming into view ngOnInit will be executed
+    // right place for you to send calls to REST API
+    console.log('Inside ngOnInit');
+  }
+
+  ngOnDestroy(): void {
+    // life cycle hook
+    // when the comp is going out of the view ngOnDestroy will be executed
+    // ideal place for you to clear the data, clear timeout, interval
+    console.log('Inside ngOnDestroy');
   }
 
 }
