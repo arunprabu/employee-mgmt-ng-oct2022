@@ -19,7 +19,6 @@ describe('UnitTestingDemoComponent', () => {
       schemas:[ CUSTOM_ELEMENTS_SCHEMA ]
     })
       .compileComponents();
-    //fixture.detectChanges();
   });
 
   beforeEach(() => {

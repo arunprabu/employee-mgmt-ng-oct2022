@@ -15,3 +15,72 @@
 12. counter should stop at 0 and show Minimum Reached upon decrement
 13. testing whether the button elements have css class 'btn' in counter component 
 14. 
+
+
+
+
+
+Agenda
+--
+  Testing Directives 
+    from directive.spec.ts 
+
+  TODO: Try out unit testing in colorizer 
+    from comp 
+    from directives 
+
+  @ViewChild()
+    Code Review 
+  
+  CRUD App 
+  ---
+    Modules 
+      Feature Modules 
+      Feature Routing Modules 
+    
+    Setting up Base for CRUD App 
+      creaing employee 
+      list employees 
+      employee details 
+      update employee 
+      delete employee
+
+Monday 
+---
+  Forms 
+  Services 
+  Http 
+  RxJS 
+
+Tuesday
+---
+  Forms 
+  Services 
+  Http 
+  RxJS 
+  Interfaces
+  Models/Classes 
+
+
+Wednesday
+--
+  Unit Testing comp 
+  Unit Testing Services  
+    mocks 
+    spies 
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
