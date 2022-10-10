@@ -77,8 +77,15 @@ Thinking in Angular
   2. Identify the hierarchy of components 
 ---
 
+Building Block 
+--
+  src/
+    components/
+    directives/
+    services/
+    pipes/
 
-Project Structure
+Feature-wise & Building Block wise Project Structure
 --
   src/
     app/ 
@@ -98,10 +105,25 @@ Project Structure
             ...
       concepts/
         components/       
-      ...
-      ...
-      ...
-
+        directives/
+          ...
+          ...
+          ...
+      home/
+      about/
+      unit-testing-demo/
+        components/
+        directives/
+      employees/
+        components/
+          add-employee/ 
+          list-employees/
+          employee-details/
+        services/
+        models/
+        ...
+        ...
+        
 
 Routing 
 ---
