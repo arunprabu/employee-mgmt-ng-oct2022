@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { EmployeesRoutingModule } from './employees-routing.module';
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 import { ListEmployeesComponent } from './components/list-employees/list-employees.component';
 import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
-
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { EmployeeDetailsComponent } from './components/employee-details/employee
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule, // for reactive forms
     EmployeesRoutingModule
   ]
 })

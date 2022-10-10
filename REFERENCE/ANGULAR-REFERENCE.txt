@@ -410,9 +410,87 @@ Directives
     
   5. Custom Structural Directives 
 
+Employee Management CRUD App 
+--
+  
+  Create an Employee  (CREATE)
+    localhost:4200/employees/add        Component: AddEmployeeComponent 
+
+    ng g c employees/components/add-employee -s 
+
+  List Employees (READ)
+    localhost:4200/employees/           Component: ListEmployeesComponent 
+
+    ng g c employees/components/list-employees -s 
+
+  Show Employee Details (READ)
+    localhost:4200/employees/1          Component: EmployeeDetailsComponent 
+
+    ng g c employees/components/employee-details -s 
+
+  Update Employee (UPDATE)
+    localhost:4200/employees/1          Component: EmployeeDetailsComponent 
+
+  Delete Employee (DELETE)
+    localhost:4200/employees/1          Component: EmployeeDetailsComponent 
+
+
+Modules 
+--
+  Feature Module 
+
+  Feature Routing Module
+
+
+  Step 1: 
+  --
+    Create a Feature Module for the employees and connect with the App Module 
+
+      ng g m employees/employees -m=app --flat 
+
+  Step 2: 
+  --
+    Create a Feature Routing Module for employees and connect with employees Module 
       
+      ng g m employees/employees-routing -m=employees --flat 
 
+  Step 3: 
+  --
+    Create the necessary components for the employees feature 
 
+  Step 4: 
+  --  
+    config the URL's for the feature in feature routing module 
+
+  Step 5: 
+  --  
+    work on validations
+
+  Step 6:
+  --
+    work on form submission       
+
+Forms in Angular 
+---
+  1. Template Driven Forms
+      * will be developed in html 
+      * easiest 
+      * validations can be implemented through Directives 
+
+      Disadvantages
+      ---
+        1. Not Suitable for complex form validations 
+        2. Not Suitable for Unit Testing 
+
+  2. Reactive Forms [RECOMMENDED]
+      * will be developed with HTML + TS
+      * easy 
+      * validations can be implemented through validators 
+
+      Advantages
+      ---
+        1. Suitable for complex form validations 
+        2. Suitable for Unit Testing 
 
 
 

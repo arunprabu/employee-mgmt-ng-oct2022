@@ -10,7 +10,7 @@ import { EmployeeDetailsComponent } from './components/employee-details/employee
 const employeesRoutes: Routes = [
   { path: 'employees', component: ListEmployeesComponent },
   { path: 'employees/add', component: AddEmployeeComponent },
-  { path: 'employees/1', component: EmployeeDetailsComponent }
+  { path: 'employees/:id', component: EmployeeDetailsComponent } // id is the URL param
 ]
 
 @NgModule({

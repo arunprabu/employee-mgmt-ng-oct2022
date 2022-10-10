@@ -20,6 +20,8 @@ import { UnitTestingDemoComponent } from './unit-testing-demo/components/unit-te
 import { CounterComponent } from './unit-testing-demo/components/counter/counter.component';
 import { HighlightDirective } from './unit-testing-demo/directives/highlight.directive';
 import { EmployeesModule } from './employees/employees.module';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Main Switching Box
 @NgModule({
@@ -39,13 +41,15 @@ import { EmployeesModule } from './employees/employees.module';
     UnlessDirective,
     UnitTestingDemoComponent,
     CounterComponent,
-    HighlightDirective
+    HighlightDirective,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,  
     FormsModule, // for ngModel
-    AppRoutingModule, 
-    EmployeesModule
+    EmployeesModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent] // AppModule should be bootstrapped with AppComponent
