@@ -19,6 +19,7 @@ import { UnlessDirective } from './concepts/directives/unless.directive';
 import { UnitTestingDemoComponent } from './unit-testing-demo/components/unit-testing-demo/unit-testing-demo.component';
 import { CounterComponent } from './unit-testing-demo/components/counter/counter.component';
 import { HighlightDirective } from './unit-testing-demo/directives/highlight.directive';
+import { EmployeesModule } from './employees/employees.module';
 
 // Main Switching Box
 @NgModule({
@@ -43,7 +44,8 @@ import { HighlightDirective } from './unit-testing-demo/directives/highlight.dir
   imports: [
     BrowserModule,  
     FormsModule, // for ngModel
-    AppRoutingModule
+    AppRoutingModule, 
+    EmployeesModule
   ],
   providers: [],
   bootstrap: [AppComponent] // AppModule should be bootstrapped with AppComponent
