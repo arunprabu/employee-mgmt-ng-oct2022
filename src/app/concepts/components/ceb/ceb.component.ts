@@ -13,6 +13,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class CebComponent implements OnInit {
 
+  featureName = 'Child to Parent';
+
   // Step 1: Let's work on to define a custom event
   // Step 1.1 Let's have an obj of EventEmitter class 
   @Output() profileLoaded = new EventEmitter(); // Step 1.2 Let's make it a custom event by using @Output()
@@ -23,9 +25,12 @@ export class CebComponent implements OnInit {
     city: 'London'
   }
 
-  constructor() { }
+  constructor() { 
+    console.log('########################## 1');
+  }
 
   ngOnInit(): void {
+    console.log('########################## 2');
   }
 
   handleSendDataToParent() {

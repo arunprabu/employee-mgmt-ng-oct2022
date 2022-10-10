@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { CebComponent } from './ceb/ceb.component';
 
 // Decorator
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class ConceptsComponent implements OnInit {
+export class ConceptsComponent implements OnInit, AfterViewInit {
   // public variable
   // interpolation related
   appName = 'Employee Manager App!';
@@ -34,10 +35,26 @@ export class ConceptsComponent implements OnInit {
   ];
   day = 1; //
 
-  constructor() { 
+  dataAccessedFromChildComp = '';
+
+  @ViewChild(CebComponent, { static: false }) cebData!: CebComponent;
+
+  constructor( private cd: ChangeDetectorRef ) { 
+    console.log('************************1.')
   }
 
   ngOnInit(): void {
+    console.log('************************2.');
+    // console.log(this.cebData);
+    // when @ViewChild with static true you can access child comp's data here
+  }
+
+  ngAfterViewInit(): void {
+    console.log('************************3.');
+    console.log(this.cebData);
+    // when @ViewChild with static false you can access child comp's data here
+    this.dataAccessedFromChildComp = this.cebData.profile.city;
+    this.cd.detectChanges();
   }
 
   // event binding related

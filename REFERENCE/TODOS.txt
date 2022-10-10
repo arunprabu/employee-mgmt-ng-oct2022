@@ -22,15 +22,10 @@
 
 Agenda
 --
-  Testing Directives 
-    from directive.spec.ts 
+  
+Monday 
+---
 
-  TODO: Try out unit testing in colorizer 
-    from comp 
-    from directives 
-
-  @ViewChild()
-    Code Review 
   
   CRUD App 
   ---
@@ -45,10 +40,12 @@ Agenda
       update employee 
       delete employee
 
-Monday 
----
   Forms 
+    Validators
+    Custom Validators
+
   Services 
+
   Http 
   RxJS 
 
@@ -83,4 +80,9 @@ Wednesday
 
 
 
-  
+Arvind 
+---
+  Has wasted 30 mins without writing a single line of code for testing colorizer directive 
+
+
+

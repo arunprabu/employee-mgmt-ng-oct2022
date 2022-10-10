@@ -5,8 +5,17 @@ import { HighlightDirective } from './highlight.directive';
 // 1. create a mock component with appHightlight in its html 
 @Component({
   template: `
-    <div appHighlight='yellow'>
-      Testing Directive with Mock Comp
+    <div id="myDiv1" appHighlight='yellow'>
+      Testing Directive with Mock Comp -- Yellow Color
+    </div>
+    <div id="myDiv2" appHighlight="skyblue">
+      Testing Directive with Mock Comp -- Skyblue Color
+    </div>
+    <div id="myDiv3" appHighlight>
+      Testing Directive with Mock Comp -- lightgray Color
+    </div>
+    <div id="myDiv4">
+      Testing Directive with Mock Comp -- no bg color
     </div>
   `
 })
@@ -30,10 +39,29 @@ describe('HighlightDirective', () => {
   
   // Step 2.2 let's test whether div of MockComponent has yellow bg color or not 
   it('should have a <div> with bg color yellow', () => {
-    const highlightWrapperEl: HTMLElement = fixture.nativeElement.querySelector('div');
+    const highlightWrapperEl: HTMLElement = fixture.nativeElement.querySelector('#myDiv1');
     console.log(highlightWrapperEl);
     const bgColor = highlightWrapperEl.style.backgroundColor;
     expect(bgColor).toBe('yellow');
   });
-  
+
+  it('should have a <div> with bg color skyblue', () => {
+    const highlightWrapperEl: HTMLElement = fixture.nativeElement.querySelector('#myDiv2');
+    const bgColor = highlightWrapperEl.style.backgroundColor;
+    expect(bgColor).toBe('skyblue');
+  });
+
+  it('should have a <div> with bg color lightgray', () => {
+    const highlightWrapperEl: HTMLElement = fixture.nativeElement.querySelector('#myDiv3');
+    const bgColor = highlightWrapperEl.style.backgroundColor;
+    expect(bgColor).toBe('rgb(211, 211, 211)');
+  });
+
+  // negative spec
+  it('should have a <div> with no bg color when directive not used', () => {
+    const divWrapper: HTMLElement = fixture.nativeElement.querySelector('#myDiv4');
+    const bgColor = divWrapper.style.backgroundColor;
+    expect(bgColor).toBe('');
+  });
+
 });

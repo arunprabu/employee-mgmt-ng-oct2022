@@ -29,6 +29,9 @@ Building Blocks
     SPEC.TS 
 
   Directives 
+    TS [DONE]
+    SPEC.TS [DONE]
+
   Services
   Classes/Models 
   Interfaces 
@@ -42,9 +45,9 @@ Building Blocks
 Concepts
 --
   ViewEncapsulation [DONE]
-  Data Binding 
+  Data Binding [DONE]
   Routing [DONE]
-  Dependency Injection 
+  Dependency Injection [DONE]
   RxJS/Observables
   Subscription 
 
@@ -54,6 +57,7 @@ Concepts
   ng animations 
   
 --
+
 NgRx - Framework 
 ---
 
