@@ -6,8 +6,7 @@
   "rules": {
     "quotes": ["error", "single"],
     "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1 }],
-    "comma-spacing": "error",
-    "no-unused-vars": ["error", { "varsIgnorePattern": "^[A-Z]" }]
+    "comma-spacing": "error"
   },
   "overrides": [
     {

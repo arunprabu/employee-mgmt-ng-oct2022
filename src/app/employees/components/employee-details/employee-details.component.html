@@ -2,12 +2,13 @@
 <div class="container">
   <div class="row">
     <div class="card col-md-12">
-      <div class="card-body">
-        <h5 class="card-title">John Doe</h5>
+      <!-- TODO: show loader/spinner here-->
+      <div class="card-body" *ngIf="employee">
+        <h5 class="card-title">{{employee.name}}</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
           card's content.</p>
-        <p>Phone: 131231321</p>
-        <p>Email: j@k.com</p>
+        <p>Phone: {{employee.phone}}</p>
+        <p>Email: {{employee.email}}</p>
         <button type="button" class="btn btn-primary" 
         data-bs-toggle="modal" data-bs-target="#editEmployeeModal" >Edit</button>
         <button type="button" class="btn btn-danger">Delete</button>
