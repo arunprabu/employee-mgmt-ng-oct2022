@@ -17,8 +17,6 @@
 14. testing colorizer directive from concepts.comp.spec.ts 
 15. testing colorizer directive with Mock Component from colorizer.directive.spec.ts 
 16. Implement 404 Page Not Found 
-
-
 17. Allow Max 10 Digits for Phone Number in add-employee.comp.html 
 18. Disable the submit button in case of error in form in add-employee.comp.html 
 19. Show the loader / spinner at first in list-employees.comp.html 
@@ -26,7 +24,9 @@
 21. Make Go Back button to work in add-employee.comp.html without routerLink 
 22. phone number to accept only numbers  in add-employee.comp.html 
 23. Implement ngx-toastr to show the notifications in add-employee.comp.html and employee-details.comp.html 
-24. Keep API URL's in environment file (tomorrow)
+24. Complete Validation in Template Driven Form in employee-details.comp.html and disable the button if error in form 
+
+25. Keep API URL's in environment file (tomorrow)
 
 
 
