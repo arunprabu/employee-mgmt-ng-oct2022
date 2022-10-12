@@ -35,9 +35,10 @@ export class EmployeeService {
     // 2.3 What's the REST API Client? HttpClient 
 
     return this.http.get(environment.employeesRestApi)
-      .pipe(map((res: any) => { // 3. get the res from the REST API 
+      .pipe(map((res: any) => {  // 3. get the res from the REST API 
         console.log(res);
         // 4. send the res to the comp 
+        // ideal place for filter, sort, adding, removing, replacing, convert, tilt 
         return res;
       }));
   }
@@ -60,6 +61,5 @@ export class EmployeeService {
         return res;
       }));
   }
-  
 
 }

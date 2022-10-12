@@ -43,7 +43,7 @@ export class AddEmployeeComponent implements OnInit {
         if(res && res.id){
           this.isSaved = true;
         }
-      });    
+      });
   }
 
 }
