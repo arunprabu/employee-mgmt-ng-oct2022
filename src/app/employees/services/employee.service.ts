@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { IEmployee } from '../models/iemployee';
+import { Observable } from 'rxjs';
 
 // Decorator
 @Injectable({
@@ -28,14 +30,14 @@ export class EmployeeService {
   }
 
   // list employees 
-  getEmployees(){ // 1. get the req from the comp 
+  getEmployees(): Observable<IEmployee[]>{ // 1. get the req from the comp 
     // 2. send the req to the REST API 
     // 2.1 What's the REST API Endpoint? https://jsonplaceholder.typicode.com/users
     // 2.2 What's the Http Method? GET
     // 2.3 What's the REST API Client? HttpClient 
 
-    return this.http.get(environment.employeesRestApi)
-      .pipe(map((res: any) => {  // 3. get the res from the REST API 
+    return this.http.get<IEmployee[]>(environment.employeesRestApi)
+      .pipe(map((res: IEmployee[]) => {  // 3. get the res from the REST API 
         console.log(res);
         // 4. send the res to the comp 
         // ideal place for filter, sort, adding, removing, replacing, convert, tilt 
