@@ -33,9 +33,18 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   handleUpdateEmployee(updateEmployeeForm: NgForm){ // submission handler
-    //console.log(this.duplicateEmployee); // submittable data
-    console.log(updateEmployeeForm);
+    console.log(this.duplicateEmployee); // submittable data
+    // console.log(updateEmployeeForm); // form state
     // TODO: submit the above data to the REST API thru service
+
+    this.employeeService.updateEmployee(this.duplicateEmployee)
+      .subscribe((res: any) => {
+        console.log(res);
+        if(res){
+          this.isUpdated = true;
+          this.employee = res;
+        }
+      });
   }
 
 }

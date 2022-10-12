@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 // Decorator
 @Injectable({
@@ -18,7 +19,7 @@ export class EmployeeService {
     // 2.1 What's the REST API URL? https://jsonplaceholder.typicode.com/users 
     // 2.2 What's the Http Method? POST
     // 2.3 What's the REST API Client Tool? HttpClient 
-    return this.http.post('https://jsonplaceholder.typicode.com/users', formData)
+    return this.http.post(environment.employeesRestApi, formData)
       .pipe(map((res: any) => { // 3. get the res from the REST API
         console.log(res);
         // 4. send the res to the comp 
@@ -33,7 +34,7 @@ export class EmployeeService {
     // 2.2 What's the Http Method? GET
     // 2.3 What's the REST API Client? HttpClient 
 
-    return this.http.get('https://jsonplaceholder.typicode.com/users')
+    return this.http.get(environment.employeesRestApi)
       .pipe(map((res: any) => { // 3. get the res from the REST API 
         console.log(res);
         // 4. send the res to the comp 
@@ -43,8 +44,17 @@ export class EmployeeService {
 
   // get employee by id 
   getEmployeeById(empId: string | null ){
-    const restApiUrl = `https://jsonplaceholder.typicode.com/users/${empId}`;
+    const restApiUrl = `${environment.employeesRestApi}/${empId}`;
     return this.http.get(restApiUrl)
+      .pipe(map((res: any) => { 
+        console.log(res);
+        return res;
+      }));
+  }
+
+  updateEmployee(empData: any) {
+    const restApiUrl = `${environment.employeesRestApi}/${empData.id}`;
+    return this.http.put(restApiUrl, empData)
       .pipe(map((res: any) => { 
         console.log(res);
         return res;

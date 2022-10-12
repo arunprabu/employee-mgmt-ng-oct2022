@@ -2,7 +2,6 @@
 2. implement 'conditional content projection in angular' / conditional transclusion / multi-slot content projection 
     display login and signup in header as last menu items 
     display back to top in footer as first menu item 
-
 3. implement active menu in menu.comp.html
 4. implement child to parent comp communication using @ViewChild()
 5. explore style binding in angular [ngStyle]
@@ -25,8 +24,8 @@
 22. phone number to accept only numbers  in add-employee.comp.html 
 23. Implement ngx-toastr to show the notifications in add-employee.comp.html and employee-details.comp.html 
 24. Complete Validation in Template Driven Form in employee-details.comp.html and disable the button if error in form 
+25. Delete employee, the show confirmation and  redirect to employees page 
 
-25. Keep API URL's in environment file (tomorrow)
 
 
 
