@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { EmployeeService } from '../../services/employee.service';
 
@@ -10,7 +11,9 @@ import { EmployeeService } from '../../services/employee.service';
 })
 export class EmployeeDetailsComponent implements OnInit {
 
+  isUpdated = false;
   employee: any; 
+  duplicateEmployee: any;
 
   constructor(private employeeService: EmployeeService, private route: ActivatedRoute) { }
 
@@ -23,6 +26,16 @@ export class EmployeeDetailsComponent implements OnInit {
         console.log(res);
         this.employee = res;
       })
+  }
+
+  handleEditModalOpen(){
+    this.duplicateEmployee = { ...this.employee }; // shallow copy
+  }
+
+  handleUpdateEmployee(updateEmployeeForm: NgForm){ // submission handler
+    //console.log(this.duplicateEmployee); // submittable data
+    console.log(updateEmployeeForm);
+    // TODO: submit the above data to the REST API thru service
   }
 
 }

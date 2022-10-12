@@ -10,7 +10,8 @@
         <p>Phone: {{employee.phone}}</p>
         <p>Email: {{employee.email}}</p>
         <button type="button" class="btn btn-primary" 
-        data-bs-toggle="modal" data-bs-target="#editEmployeeModal" >Edit</button>
+        data-bs-toggle="modal" data-bs-target="#editEmployeeModal" 
+          (click)="handleEditModalOpen()">Edit</button>
         <button type="button" class="btn btn-danger">Delete</button>
 
         <!-- Modal -->
@@ -22,37 +23,63 @@
                 <h5 class="modal-title" id="exampleModalLabel">Update Employee</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
-                <form>
+              <div class="modal-body" *ngIf="duplicateEmployee">
+                <!-- if you want html validation use ngNativeValidate in form tag -->
+                <form #updateEmployeeForm="ngForm" (ngSubmit)="handleUpdateEmployee(updateEmployeeForm)">
                   <div class="form-group row mb-3">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="Enter name" 
+                      <input type="text" class="form-control" 
+                      placeholder="Enter name" 
+                      name="empName"
+                      [(ngModel)]="duplicateEmployee.name"
+                      #name="ngModel"
+                      [ngClass]="{ 'is-invalid': (name.touched && name.invalid)}"
                       required>
+                      <div class="invalid-feedback">
+                        Name is Required
+                      </div>
                     </div>
                   </div>
                   <div class="form-group row mb-3">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Phone</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" placeholder="Enter Phone"
-                      required >
+                      <input type="text" class="form-control" 
+                      placeholder="Enter Phone"
+                      name="phone"
+                      [(ngModel)]="duplicateEmployee.phone"
+                      #phone="ngModel"
+                      [ngClass]="{ 'is-invalid': (phone.touched && phone.invalid)}"
+                      required>
+                      <div class="invalid-feedback">
+                        Phone is Required
+                      </div>
                     </div>
                   </div>
                   <div class="form-group row mb-3">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
                       <input type="email" class="form-control" 
-                        placeholder="Enter Email" required >
+                        [(ngModel)]="duplicateEmployee.email"
+                        name="email"
+                        placeholder="Enter Email"
+                        #email="ngModel"
+                        [ngClass]="{ 'is-invalid': (email.touched && email.invalid)}"
+                        required email>
+                        <div class="invalid-feedback">
+                          <div *ngIf="email.errors?.['required']">Email is Required</div>
+                          <div *ngIf="email.errors?.['email']">Email seems to be not valid</div>
+                        </div>
                     </div>
                   </div>
 
-                  <div class="alert alert-success">
+                  <div class="alert alert-success" *ngIf="isUpdated">
                     Updated successfully!
                   </div>
 
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary" >Save changes</button>
                   </div>
                 </form>
               </div>

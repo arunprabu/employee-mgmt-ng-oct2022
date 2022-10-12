@@ -66,11 +66,8 @@ Monday
 
 Tuesday
 ---
-  Custom Validators
-  Forms 
-  Services 
-  Http 
-  RxJS 
+
+  
 
 Wednesday
 --
@@ -80,6 +77,8 @@ Wednesday
   Unit Testing Services  
     mocks 
     spies 
+  
+Custom Validators
 
 
 
