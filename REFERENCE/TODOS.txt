@@ -25,7 +25,8 @@
 23. Implement ngx-toastr to show the notifications in add-employee.comp.html and employee-details.comp.html 
 24. Complete Validation in Template Driven Form in employee-details.comp.html and disable the button if error in form 
 25. Delete employee, the show confirmation and  redirect to employees page 
-
+26. Explore ngTemplateOutlet
+27. Explore @ContentChild 
 
 
 

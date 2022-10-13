@@ -39,6 +39,12 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
 
   @ViewChild(CebComponent, { static: false }) cebData!: CebComponent;
 
+  myContext = {
+    $implicit: 'World', 
+    age: 20,
+    name: 'John'
+  };
+
   constructor( private cd: ChangeDetectorRef ) { 
     console.log('************************1.')
   }

@@ -136,6 +136,66 @@
         <button class="btn btn-success">Login</button>
       </div>
 
+      <hr>
+      <h4>ngTemplateOutlet</h4> 
+      <ng-template #template1>
+        <p>This is our template. It will be displayed in ng-container</p>
+      </ng-template>
+      
+      <p>The Template appears after this</p>
+      <!-- 
+        We want to render the above template here.
+        Hence we use the ngTemplateOutlet directive 
+        Assign template1 to ngTemplateOutlet
+      -->  
+      <ng-container *ngTemplateOutlet="template1">
+        This text is not displayed
+      </ng-container>
+
+      <ng-template let-value="value" #messageTemplate>  
+        <p>Value Received from the Parent is  {{value}}</p>
+      </ng-template>
+
+      <ng-container [ngTemplateOutlet]="messageTemplate" [ngTemplateOutletContext] ="{value:'1000'}">
+      </ng-container>
+
+
+      <h3>ng-container, ngTemplateOutlet and ng-template</h3>
+
+      <!-- random in the following will refer to $implicit in myContext -->
+      <ng-template #eng1 let-random>
+        <span>Hello {{random}}!</span>
+      </ng-template>
+      <ng-template #eng2 let-myAge="age1">
+        <span>You are {{myAge}}!</span>
+      </ng-template>
+      <ng-template #italian let-personName="name">
+        <span>Hola {{personName}}!</span>
+      </ng-template>
+
+      <!-- Refer: concepts.comp.ts also for a variable myContext -->
+      <ng-container *ngTemplateOutlet="eng1; context: myContext"></ng-container>
+      <hr>
+      <ng-container *ngTemplateOutlet="eng2; context: myContext"></ng-container>
+      <hr>
+      <ng-container *ngTemplateOutlet="italian; context: myContext"></ng-container>
+      <hr>
+
+       
+      <h4>Alternative Syntax is here</h4>
+      <ng-template let-person="person"  #welcomeTemplate>  
+        <p>Dear {{person.name}} , {{person.message}}</p>
+      </ng-template>
+      
+      <ng-container [ngTemplateOutlet]="welcomeTemplate" 
+        [ngTemplateOutletContext]="{ person:{name:'Guest',message:'Welcome to our site'} }"> 
+        <!-- you can have the above obj in Ts also. -->
+      </ng-container> 
+      <ng-container [ngTemplateOutlet]="welcomeTemplate" 
+        [ngTemplateOutletContext]="{ person:{name:'John',message:'Your Trial plan will end Today!'} }">
+      </ng-container> 
+
+
     </div>
 
     <div class="tab-pane fade" id="pipes-tab" role="tabpanel" aria-labelledby="pipes-tab">
