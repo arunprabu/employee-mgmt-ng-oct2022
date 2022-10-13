@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
+import { DemoIfDirective } from '../directives/demo-if.directive';
+import { UnlessDirective } from '../directives/unless.directive';
 import { CebComponent } from './ceb/ceb.component';
 
 import { ConceptsComponent } from './concepts.component';
@@ -18,7 +20,9 @@ describe('ConceptsComponent', () => {
       declarations: [ 
         ConceptsComponent,
         CpbComponent,
-        CebComponent
+        CebComponent,
+        DemoIfDirective,
+        UnlessDirective
       ]
     })
       .compileComponents();

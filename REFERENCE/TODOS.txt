@@ -68,11 +68,3 @@
   
 
 
-
-
-Arvind 
----
-  Has wasted 30 mins without writing a single line of code for testing colorizer directive 
-
-
-

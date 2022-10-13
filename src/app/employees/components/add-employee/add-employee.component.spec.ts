@@ -127,4 +127,11 @@ describe('AddEmployeeComponent', () => {
     expect(invalidEmailEl).toBeFalsy();
   });
 
+  // name with invalid inputs 
+
+  // phone with invalid inputs 
+
+  // email with invalid inputs 
+  
+
 });
