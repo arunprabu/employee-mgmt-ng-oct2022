@@ -28,16 +28,19 @@ Building Blocks
     TS 
     SPEC.TS 
 
-  Directives 
+  Directives [DONE]
     TS [DONE]
     SPEC.TS [DONE]
 
-  Services
-  Classes/Models 
-  Interfaces 
+  Services 
+    TS [DONE]
+    SPEC.TS 
+
+  Interfaces /Models  [DONE ]
   Guards
   Pipes 
-  Modules 
+  Modules [DONE]
+  Classes
   Interceptors 
 
 ---
@@ -48,8 +51,9 @@ Concepts
   Data Binding [DONE]
   Routing [DONE]
   Dependency Injection [DONE]
-  RxJS/Observables
+  RxJS/Observables [DONE]
   Subscription 
+  Lazy Loading 
 
   Unit Testing 
 

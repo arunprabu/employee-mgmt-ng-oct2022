@@ -52,6 +52,6 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent] // AppModule should be bootstrapped with AppComponent
+  bootstrap: [AppComponent]// AppModule should be bootstrapped with AppComponent
 })
 export class AppModule { }

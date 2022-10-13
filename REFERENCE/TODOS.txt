@@ -50,34 +50,10 @@
 
 
 
-Agenda
---
-  
-Monday 
----
 
-  
-  CRUD App 
-  ---
 
-  
-  
 
-Tuesday
----
 
-  
-
-Wednesday
---
-  Interfaces
-  Models/Classes 
-  Unit Testing comp 
-  Unit Testing Services  
-    mocks 
-    spies 
-  
-Custom Validators
 
 
 
