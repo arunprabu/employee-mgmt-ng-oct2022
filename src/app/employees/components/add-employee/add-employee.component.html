@@ -15,13 +15,13 @@
         <div class="col-sm-10">
           <!-- step 4: patchup form fields with the FormControl in ts -->
           <!-- goto ts for step 5-->
-          <input type="text" class="form-control" 
+          <input type="text" class="form-control" id="nameInput"
           placeholder="Enter Name" formControlName="name" 
           [ngClass]="{ 'is-invalid': addEmployeeForm.get('name')?.touched && 
-          addEmployeeForm.get('name')?.invalid }" />
+          addEmployeeForm.get('name')?.invalid }"/>
           <!-- step6: displaying validation related msg -->
           <div class="invalid-feedback">
-            <div>Name is required</div>
+            <div id="nameRequired" *ngIf="addEmployeeForm.get('name')?.invalid">Name is required</div>
           </div>
         </div>
       </div>
@@ -29,11 +29,11 @@
         <label for="staticPhone" class="col-sm-2 col-form-label">Phone</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" placeholder="Enter Phone" 
-          formControlName="phone" 
+          formControlName="phone" id="phoneInput"
           [ngClass]="{ 'is-invalid': addEmployeeForm.get('phone')?.touched && 
           addEmployeeForm.get('phone')?.invalid }"/>
           <div class="invalid-feedback">
-            <div>Phone is required</div>
+            <div id="phoneRequired" *ngIf="addEmployeeForm.get('phone')?.invalid">Phone is required</div>
             <!-- <div>TODO: Max 10 Digits</div> -->
           </div>
         </div>
@@ -42,12 +42,12 @@
         <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
           <input type="email" class="form-control" placeholder="Enter Email" 
-          formControlName="email" 
+          formControlName="email" id="emailInput"
           [ngClass]="{ 'is-invalid': addEmployeeForm.get('email')?.touched && 
           addEmployeeForm.get('email')?.invalid }"/>
           <div class="invalid-feedback">
-            <div *ngIf="addEmployeeForm.get('email')?.errors?.['required']">Email is required</div>
-            <div *ngIf="addEmployeeForm.get('email')?.errors?.['email']">Email seems to be not valid</div>
+            <div id="emailRequired" *ngIf="addEmployeeForm.get('email')?.errors?.['required']">Email is required</div>
+            <div id="invalidEmail" *ngIf="addEmployeeForm.get('email')?.errors?.['email']">Email seems to be not valid</div>
           </div>
         </div>
       </div>
@@ -58,7 +58,8 @@
 
       <div class="form-group row">
         <div class="col-sm-10 offset-sm-2">
-          <button type="submit" class="btn btn-primary submitBtn">Submit</button>
+          <button type="submit" class="btn btn-primary submitBtn"
+          [disabled]="addEmployeeForm.invalid">Submit</button>
           <!-- TODO: Learn about disabling the submit button in case of error-->
         </div>
       </div>

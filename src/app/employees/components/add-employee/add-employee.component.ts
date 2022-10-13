@@ -23,15 +23,14 @@ export class AddEmployeeComponent implements OnInit {
     // Step 1 continues 
     this.addEmployeeForm = new FormGroup({
       // Step 2: Have the input tags equivalents in TS 
-      name: new FormControl('arun', Validators.required), // Step 5: Let's work on validation
-      phone: new FormControl('123123', Validators.required), // For Step 6: Refer html 
-      email: new FormControl('a@b.com', [Validators.required, Validators.email]) // can add multiple validators
+      name: new FormControl('', Validators.required), // Step 5: Let's work on validation
+      phone: new FormControl('', Validators.required), // For Step 6: Refer html 
+      email: new FormControl('', [Validators.required, Validators.email]) // can add multiple validators
       // For Step 3: Refer html
     });
   }
 
   handleAddEmployee(){
-    console.log('submitted');
     console.log(this.addEmployeeForm);
     // form data 
     console.log(this.addEmployeeForm.value);
