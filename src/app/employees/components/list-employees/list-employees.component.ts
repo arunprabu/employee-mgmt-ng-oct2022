@@ -18,6 +18,7 @@ export class ListEmployeesComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('Inside ngOnInit');
+
     // ideal place for REST API calls
     // 2. send the req to the service 
     this.employeeService.getEmployees()
@@ -26,6 +27,5 @@ export class ListEmployeesComponent implements OnInit {
         this.employees = res;
       });
   }
-
 
 }

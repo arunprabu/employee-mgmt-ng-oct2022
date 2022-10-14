@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { HighlightDirective } from '../../directives/highlight.directive';
 import { CounterComponent } from '../counter/counter.component';
 
@@ -37,4 +37,22 @@ describe('UnitTestingDemoComponent', () => {
     const bgColor = highlightWrapperEl.style.backgroundColor;
     expect(bgColor).toBe('skyblue');
   });
+
+
+  // Approach #1 to test with fakeAsync and tick
+  it('has featureName with proper text [APPROACH #1]', fakeAsync(() => {
+    component.ngOnInit();
+    tick(2001);
+    expect(component.featureName).toEqual('Testing the ngOnInit with fakeAsync and tick');
+  }));
+
+  // Approach #2 using timeout
+  it('has featureName with proper text [APPROACH #2]', ((done) => {
+    component.ngOnInit();
+    setTimeout( () => {
+      expect(component.featureName).toEqual('Testing the ngOnInit with fakeAsync and tick');
+      done();
+    }, 2001);
+  }));
+
 });

@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class UnitTestingDemoComponent implements OnInit {
+  featureName!: string;
 
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout( () => {
+      this.featureName = 'Testing the ngOnInit with fakeAsync and tick';
+    }, 2000);
   }
 
 }

@@ -244,11 +244,12 @@ Data Binding
 Cross Component Communication
 ---------
   1. Parent to Child Component Communication [DONE]
-      using Custom Property Binding 
+      using Custom Property Binding with @Input() 
+      using content projection with ng-content -- @ContentChild() or @ContentChildren()
 
   2. Child to Parent Component Communication
-      2.1 using Custom Event Binding (child comp sends data to parent)
-      2.2 using @ViewChild()  (parent comp can access data from child comp)  [TODO]
+      2.1 using Custom Event Binding using @Output() (child comp sends data to parent)
+      2.2 using @ViewChild(), @ViewChildren() (parent comp can access data from child comp)  [TODO]
 
   3. Any to Any Component Communication
       Prereq: Services, Dep Inj, RxJS/Observables, Subscription 

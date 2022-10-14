@@ -6,7 +6,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     <footer class="text-center">
       <hr>
       <app-menu>
-        <li class="nav-item">
+        <li class="nav-item" #backToTop>
           <a class="nav-link" href="#">Back to Top</a>
         </li>
       </app-menu>
