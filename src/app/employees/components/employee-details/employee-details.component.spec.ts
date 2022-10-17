@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 import { EmployeeService } from '../../services/employee.service';
@@ -17,7 +18,17 @@ describe('EmployeeDetailsComponent', () => {
       imports: [
         HttpClientModule,
         RouterTestingModule
-      ]
+      ],
+      providers: [{
+        provide: ActivatedRoute,
+        useValue: {
+          snapshot: {
+            paramMap: convertToParamMap({
+              id: '10'
+            })
+          }
+        }
+      }],
     }).compileComponents();
   });
 
@@ -54,26 +65,28 @@ describe('EmployeeDetailsComponent', () => {
       .subscribe({
         next: (res) => {
           expect(res).toEqual(mockResponse);
-          // done();
+          done();
         },
-        error: done.fail
+        error: () => {
+          console.log('SOME ERROR OCCURED.');
+          done();
+        }
       })
-    done();
     //})
   });
 
-  // it('should call getEmployeeById', () => {
-  //   spyOn(component.employeeService, 'getEmployeeById').and.callThrough();
-  //   component.employeeService.getEmployeeById('1');
-  //   expect(component.employeeService.getEmployeeById).toHaveBeenCalled();
-  // });
+  it('should call getEmployeeById', () => {
+    spyOn(component.employeeService, 'getEmployeeById').and.callThrough();
+    component.employeeService.getEmployeeById('1');
+    expect(component.employeeService.getEmployeeById).toHaveBeenCalled();
+  });
 
   // negative test spec
-  // it('should return error when wrong empId sent', () => {
-  //   spyOn(component.employeeService, 'getEmployeeById').withArgs(null).and.throwError('404');
-  //   expect(function () {
-  //     component.employeeService.getEmployeeById(null)
-  //   }).toThrow(new Error('404'))
-  // });
+  it('should return error when wrong empId sent', () => {
+    spyOn(component.employeeService, 'getEmployeeById').withArgs(null).and.throwError('404');
+    expect(function () {
+      component.employeeService.getEmployeeById(null)
+    }).toThrow(new Error('404'))
+  });
 
 })

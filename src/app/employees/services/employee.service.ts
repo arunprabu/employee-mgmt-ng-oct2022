@@ -37,7 +37,6 @@ export class EmployeeService {
     // 2.1 What's the REST API Endpoint? https://jsonplaceholder.typicode.com/users
     // 2.2 What's the Http Method? GET
     // 2.3 What's the REST API Client? HttpClient 
-
     return this.http.get<IEmployee[]>(environment.employeesRestApi)
       .pipe(map((res: IEmployee[]) => {  // 3. get the res from the REST API 
         console.log(res);
