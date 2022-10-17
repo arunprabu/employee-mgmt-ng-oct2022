@@ -57,7 +57,7 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     console.log('************************3.');
-    console.log(this.cebData);
+    // console.log(this.cebData);
     // when @ViewChild with static false you can access child comp's data here
     this.dataAccessedFromChildComp = this.cebData.profile.city;
     this.cd.detectChanges();
@@ -76,7 +76,7 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
   //Step 6: event handler of the custom event 
   handleProfileLoaded(event: any){ // Step 7: we receive the data thru event
     console.log('Inside handleProfileLoaded');
-    console.log(event);
+    // console.log(event);
     this.dataReceivedFromChildComp = event;
   }
 

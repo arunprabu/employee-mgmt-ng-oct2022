@@ -31,18 +31,19 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   handleAddEmployee(){
-    console.log(this.addEmployeeForm);
+    // console.log(this.addEmployeeForm);
     // form data 
-    console.log(this.addEmployeeForm.value);
+    //console.log(this.addEmployeeForm.value);
     
     // 2. send the above form data to the service
     this.employeeService.createEmployee(this.addEmployeeForm.value)
       .subscribe( (res: any) => { // 3. get the res from service
-        console.log(res);
+        //console.log(res);
         if(res && res.id){
           this.isSaved = true;
         }
       });
   }
 
+  
 }

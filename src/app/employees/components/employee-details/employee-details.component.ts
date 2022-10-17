@@ -15,7 +15,7 @@ export class EmployeeDetailsComponent implements OnInit {
   employee: any; 
   duplicateEmployee: any;
 
-  constructor(private employeeService: EmployeeService, private route: ActivatedRoute) { }
+  constructor(public employeeService: EmployeeService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     // Reading URL Param

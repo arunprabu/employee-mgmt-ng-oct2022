@@ -34,6 +34,33 @@
 
 
 
+--
+Friday
+--
+
+  Testing Service 
+    From Comp.spec.ts 
+      Positive case [MONDAY]
+      NEgative Case [DONE]
+
+    From Service.spec.ts 
+
+
+  TODO: Router Testing [DONE]
+
+  Pipes 
+
+  Any to Any Component Communication (4 Hours)
+  Authentication (5-6 Hours)
+    Guards 
+    Custom Validator
+
+  NgRx (max 5 hours)
+
+  ---
+  Nice to have topics 
+
+
 
 
 

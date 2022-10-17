@@ -25,7 +25,7 @@ export class EmployeeService {
     // 2.3 What's the REST API Client Tool? HttpClient 
     return this.http.post(environment.employeesRestApi, formData)
       .pipe(map((res: any) => { // 3. get the res from the REST API
-        console.log(res);
+        // console.log(res);
         // 4. send the res to the comp 
         return res;
       }));
@@ -52,7 +52,7 @@ export class EmployeeService {
     const restApiUrl = `${environment.employeesRestApi}/${empId}`;
     return this.http.get(restApiUrl)
       .pipe(map((res: any) => { 
-        console.log(res);
+        // console.log(res);
         return res;
       }));
   }
@@ -61,7 +61,7 @@ export class EmployeeService {
     const restApiUrl = `${environment.employeesRestApi}/${empData.id}`;
     return this.http.put(restApiUrl, empData)
       .pipe(map((res: any) => { 
-        console.log(res);
+        // console.log(res);
         return res;
       }));
   }

@@ -23,7 +23,7 @@ export class ListEmployeesComponent implements OnInit {
     // 2. send the req to the service 
     this.employeeService.getEmployees()
       .subscribe( (res: IEmployee[]) => { // 3. get the res from the service
-        console.log(res);
+        // console.log(res);
         this.employees = res;
       });
   }
