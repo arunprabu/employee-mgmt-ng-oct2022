@@ -38,9 +38,9 @@ Building Blocks
 
   Interfaces /Models  [DONE ]
   Modules [DONE]
-  Pipes 
+  Pipes [DONE]
   Guards 
-  Classes 
+  Classes [DONE]
   Interceptors 
 
 ---
@@ -52,16 +52,16 @@ Concepts
   Routing [DONE]
   Dependency Injection [DONE]
   RxJS/Observables [DONE]
-  Subscription 
+  Subscription [DONE]
   Lazy Loading 
 
   Unit Testing 
     Components [DONE]
     Directives [DONE]
     Services [DONE]
-    Pipes 
+    Pipes [DONE]
     Guards [TODO]
-    Classes 
+    Classes [TODO]
     Interceptors [TODO]
 
   Internationalization (i18n)
@@ -119,6 +119,7 @@ Feature-wise & Building Block wise Project Structure
           ellipsis/
             ...
             ...
+        utils/
       concepts/
         components/       
         directives/

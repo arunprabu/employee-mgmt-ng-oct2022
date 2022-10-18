@@ -27,28 +27,11 @@
 25. Delete employee, the show confirmation and  redirect to employees page 
 26. Explore ngTemplateOutlet
 27. Explore @ContentChild 
-28. Page Title should be implemented in Angular App for all urls
-29. Learn about json pipe 
-30. Learn about async pipe 
+28. Page Title should be implemented in Angular App for all urls [Try it out on Tuesday/Wednesday]
+29. Negative test with empty string for ellipsis pipe 
+30. Optimize menu.comp.html to avoid code duplicate
 
 
-
-
-
-
-  Pipes 
-    ts [DONE]
-    Spec.ts 
-
-  Agenda
---
-
-  Testing Pipes 
-
-  
-
-
-  Any to Any to Comp Commn 
 
 
 

@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
+import { EllipsisPipe } from 'src/app/shared/pipes/ellipsis.pipe';
 import { DemoIfDirective } from '../directives/demo-if.directive';
 import { UnlessDirective } from '../directives/unless.directive';
 import { CebComponent } from './ceb/ceb.component';
@@ -22,7 +23,8 @@ describe('ConceptsComponent', () => {
         CpbComponent,
         CebComponent,
         DemoIfDirective,
-        UnlessDirective
+        UnlessDirective,
+        EllipsisPipe
       ]
     })
       .compileComponents();

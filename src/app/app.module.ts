@@ -23,6 +23,7 @@ import { EmployeesModule } from './employees/employees.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
+import { ProductsModule } from './products/products.module';
 
 // Main Switching Box
 @NgModule({
@@ -50,6 +51,7 @@ import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
     BrowserModule,  
     FormsModule, // for ngModel
     EmployeesModule,
+    ProductsModule,
     AppRoutingModule,
     HttpClientModule
   ],

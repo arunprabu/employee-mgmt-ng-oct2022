@@ -34,9 +34,9 @@ export class ListEmployeesComponent implements OnInit, OnDestroy {
     // whenever the comp goes out of the view -- this will be executed
     // ideal place for you to clear data, clear interval & timeout, unsubscribe
     console.log('Inside Destroy');
-    if(this.employees && this.employees.length > 0) {
-      this.employees.length = 0;
-    }
+    // if(this.employees && this.employees.length > 0) {
+    //   this.employees.length = 0;
+    // }
     this.employeesSubscription.unsubscribe();
   }
 
