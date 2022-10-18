@@ -32,15 +32,15 @@ Building Blocks
     TS [DONE]
     SPEC.TS [DONE]
 
-  Services 
-    TS [DONE]
+  Services [DONE]
+    TS 
     SPEC.TS 
 
   Interfaces /Models  [DONE ]
-  Guards
-  Pipes 
   Modules [DONE]
-  Classes
+  Pipes 
+  Guards 
+  Classes 
   Interceptors 
 
 ---
@@ -56,9 +56,17 @@ Concepts
   Lazy Loading 
 
   Unit Testing 
+    Components [DONE]
+    Directives [DONE]
+    Services [DONE]
+    Pipes 
+    Guards [TODO]
+    Classes 
+    Interceptors [TODO]
 
   Internationalization (i18n)
   ng animations 
+  angular material 
   
 --
 
@@ -105,6 +113,10 @@ Feature-wise & Building Block wise Project Structure
             ... spec.ts 
           menu/
             ...
+            ...
+            ...
+        pipes/
+          ellipsis/
             ...
             ...
       concepts/
@@ -232,10 +244,10 @@ Data Binding
 
       Note: applicable in form fields
 
-  5. Custom Property Binding 
+  5. Custom Property Binding [DONE]
       []
 
-  6. Custom Event Binding 
+  6. Custom Event Binding [DONE]
       ()
 
 
@@ -497,7 +509,16 @@ Forms in Angular
         1. Suitable for complex form validations 
         2. Suitable for Unit Testing 
 
+----
+Pipes 
+---
+  * Tiny utilities to transform info from one format to another 
 
+  Built-in Pipes 
+  --
+    lowercase, uppercase
 
-
+  
+  1. Pure Pipes 
+  2. Impure Pipes 
 

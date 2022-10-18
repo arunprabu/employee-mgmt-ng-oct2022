@@ -199,7 +199,30 @@
     </div>
 
     <div class="tab-pane fade" id="pipes-tab" role="tabpanel" aria-labelledby="pipes-tab">
-      <h2>Pipes</h2>
+      <h2>Pipes - Demo</h2>
+      <h3>Built-in Pipes - Demo</h3>
+      <p>{{dummyText}}</p>
+      <p>{{dummyText | lowercase }}</p>
+      <p>{{dummyText | uppercase  }}</p>
+      <hr>
+      <p>{{today}}</p>
+       <p>{{today | date }}</p>
+       <!-- the following parameterized pipe-->
+       <p>{{today | date: 'dd-MMM-yyyy'}}</p>
+       <p>{{today | date: 'MMMM dd, yyyy hh:mm:ss a'}}</p>
+       <!-- Chaining Pipe -->
+       <p>{{today | date: 'MMMM dd, yyyy hh:mm:ss a' | lowercase }}</p>
+
+       <hr>
+       <h3>Custom Pipes - Demo</h3>
+       <p>ng g p shared/pipes/ellipsis</p>
+       <!-- <p>{{dummyText}}</p> without custom pipe -->
+       <hr>
+       <p>{{dummyText | ellipsis }}</p>
+       <p>{{dummyText | ellipsis: 50}}</p>
+       <p>{{dummyText | ellipsis: 60}}</p>
+       
+
     </div>
 
   </div>

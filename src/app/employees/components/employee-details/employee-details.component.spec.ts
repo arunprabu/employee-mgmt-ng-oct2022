@@ -19,16 +19,18 @@ describe('EmployeeDetailsComponent', () => {
         HttpClientModule,
         RouterTestingModule
       ],
-      providers: [{
-        provide: ActivatedRoute,
-        useValue: {
-          snapshot: {
-            paramMap: convertToParamMap({
-              id: '10'
-            })
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              paramMap: convertToParamMap({
+                id: '10'
+              })
+            }
           }
         }
-      }],
+      ]
     }).compileComponents();
   });
 
@@ -47,6 +49,12 @@ describe('EmployeeDetailsComponent', () => {
     spyOn(component, 'ngOnInit').and.callThrough();
     component.ngOnInit();
     expect(component.ngOnInit).toHaveBeenCalled();
+  });
+
+  it('should call getEmployeeById of EmployeeService', () => {
+    spyOn(component.employeeService, 'getEmployeeById').and.callThrough();
+    component.employeeService.getEmployeeById('1');
+    expect(component.employeeService.getEmployeeById).toHaveBeenCalled();
   });
 
   // positive test spec for fetching emp details 
@@ -73,12 +81,6 @@ describe('EmployeeDetailsComponent', () => {
         }
       })
     //})
-  });
-
-  it('should call getEmployeeById', () => {
-    spyOn(component.employeeService, 'getEmployeeById').and.callThrough();
-    component.employeeService.getEmployeeById('1');
-    expect(component.employeeService.getEmployeeById).toHaveBeenCalled();
   });
 
   // negative test spec

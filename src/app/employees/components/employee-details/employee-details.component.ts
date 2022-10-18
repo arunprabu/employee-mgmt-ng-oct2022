@@ -20,7 +20,7 @@ export class EmployeeDetailsComponent implements OnInit {
   ngOnInit(): void {
     // Reading URL Param
     const empId: string | null = this.route.snapshot.paramMap.get('id');
-
+    console.log('==============> EMPLOYEE ID: ' + empId)
     this.employeeService.getEmployeeById(empId)
       .subscribe((res: any) => {
         console.log(res);

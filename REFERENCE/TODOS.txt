@@ -27,33 +27,37 @@
 25. Delete employee, the show confirmation and  redirect to employees page 
 26. Explore ngTemplateOutlet
 27. Explore @ContentChild 
+28. Page Title should be implemented in Angular App for all urls
+29. Learn about json pipe 
+30. Learn about async pipe 
 
 
 
 
 
-
-
---
-Friday
---
-
-  Testing Service 
-    From Comp.spec.ts 
-      Positive case [MONDAY]
-      NEgative Case [DONE]
-
-    From Service.spec.ts 
-
-
-  TODO: Router Testing [DONE]
 
   Pipes 
+    ts [DONE]
+    Spec.ts 
+
+  Agenda
+--
+
+  Testing Pipes 
+
+  
+
+
+  Any to Any to Comp Commn 
+
+
+
 
   Any to Any Component Communication (4 Hours)
   Authentication (5-6 Hours)
     Guards 
     Custom Validator
+
 
   NgRx (max 5 hours)
 

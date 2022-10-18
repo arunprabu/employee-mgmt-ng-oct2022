@@ -22,6 +22,7 @@ import { HighlightDirective } from './unit-testing-demo/directives/highlight.dir
 import { EmployeesModule } from './employees/employees.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
 
 // Main Switching Box
 @NgModule({
@@ -42,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     UnitTestingDemoComponent,
     CounterComponent,
     HighlightDirective,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,  

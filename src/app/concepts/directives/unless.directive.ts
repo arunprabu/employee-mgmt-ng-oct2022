@@ -6,7 +6,6 @@ import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 export class UnlessDirective {
 
   constructor( private viewContainer: ViewContainerRef, private templateRef: TemplateRef<any> ) { 
-    console.log('Inside UnlessDirective constructor');
     // console.log(viewContainer);  // div 
     // console.log(templateRef); // button
   }

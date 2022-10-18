@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { CebComponent } from './ceb/ceb.component';
 
 // Decorator
@@ -45,18 +45,19 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
     name: 'John'
   };
 
+  // pipes related 
+  dummyText = 'Thanks for joining the session. Warm Welcome from Learning & Development team!';
+  today: Date = new Date();
+
   constructor( private cd: ChangeDetectorRef ) { 
-    console.log('************************1.')
   }
 
   ngOnInit(): void {
-    console.log('************************2.');
     // console.log(this.cebData);
     // when @ViewChild with static true you can access child comp's data here
   }
 
   ngAfterViewInit(): void {
-    console.log('************************3.');
     // console.log(this.cebData);
     // when @ViewChild with static false you can access child comp's data here
     this.dataAccessedFromChildComp = this.cebData.profile.city;
@@ -70,7 +71,6 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
     element.disabled = true;
     // TODO: Change the label to 'Clicked'
     element.textContent = 'Clicked';
-    alert('clicked');
   }
 
   //Step 6: event handler of the custom event 

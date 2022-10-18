@@ -129,9 +129,11 @@ describe('AddEmployeeComponent', () => {
 
   // name with invalid inputs 
 
-  // phone with invalid inputs 
+  // phone with invalid inputs
 
-  // email with invalid inputs 
-  
+  // email with invalid inputs
 
+  // have the filled form submission logic tested using spy -- refer emp-details.comp.spec
+
+  // have the formdata as null and test form submission logic using spy -- refer emp-details.comp.spec
 });
