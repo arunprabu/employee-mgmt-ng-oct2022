@@ -34,12 +34,13 @@
 
 
 
+  Any to Any Component Communication (2 Hours)
+  
 
-
-  Any to Any Component Communication (4 Hours)
   Authentication (5-6 Hours)
     Guards 
     Custom Validator
+    Interceptors 
 
 
   NgRx (max 5 hours)

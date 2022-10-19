@@ -519,7 +519,17 @@ Pipes
   --
     lowercase, uppercase
 
-  
   1. Pure Pipes 
   2. Impure Pipes 
 
+----
+Interfaces  for models 
+--
+  ng g interface Employee  (or)
+  ng g interface IEmployee (or)
+  ng g interface Employee --type=model // will get filename with .model.ts 
+
+Classes for Model 
+---
+  ng g cl Employee  (or)
+  ng g cl Employee --type=model   // will get filename with .model.ts 

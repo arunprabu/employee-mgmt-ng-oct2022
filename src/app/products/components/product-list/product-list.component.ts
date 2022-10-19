@@ -18,4 +18,9 @@ export class ProductListComponent implements OnInit {
     this.products = this.productsService.getProducts();
   }
 
+  handleAddToCart(product: IProduct){
+    console.log(product);
+    // send the above data to the cart data service
+  }
+
 }

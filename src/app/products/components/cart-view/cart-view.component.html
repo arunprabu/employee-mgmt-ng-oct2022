@@ -8,19 +8,19 @@
     </div>
     <div class="card-body">
       <!-- PRODUCT -->
-      <div class="row">
+      <div class="row" *ngFor="let cartItem of cartItems"> <!-- loop thru -->
         <div class="col-12 col-sm-12 col-md-2 text-center">
           <img class="img-responsive" src="https://dummyimage.com/120x80/55595c/fff" alt="preview" width="120" height="80">
         </div>
         <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-          <h4 class="product-name"><strong>Apple</strong></h4>
+          <h4 class="product-name"><strong>{{cartItem.name}}</strong></h4>
           <h4>
-            <small>Fruit</small>
+            <small>{{cartItem.category}}</small>
           </h4>
         </div>
         <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
           <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-            <h6><strong>$123<span class="text-muted">x</span></strong></h6>
+            <h6><strong>{{cartItem.price}}<span class="text-muted">x</span></strong></h6>
           </div>
           <div class="col-4 col-sm-4 col-md-4">
             <div class="quantity">

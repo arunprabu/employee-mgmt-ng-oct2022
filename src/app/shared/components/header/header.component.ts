@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from 'src/app/products/models/iproduct';
+import { CartDataService } from '../../services/cart-data.service';
 import { NavigationHelper } from '../../utils/navigation-helper';
 
 @Component({
@@ -8,8 +10,14 @@ import { NavigationHelper } from '../../utils/navigation-helper';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public navigationHelper: NavigationHelper) { }
+  cartCount = 0;
+
+  constructor(public navigationHelper: NavigationHelper, private cartDataService: CartDataService) { }
 
   ngOnInit(): void {
+    this.cartDataService.latestCartItems.subscribe( (cartItems: IProduct[]) => {
+      console.log(cartItems);
+      this.cartCount = cartItems.length;
+    });
   }
 }
