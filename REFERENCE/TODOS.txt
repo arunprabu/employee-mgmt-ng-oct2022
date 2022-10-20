@@ -30,11 +30,10 @@
 28. Page Title should be implemented in Angular App for all urls [Try it out on Tuesday/Wednesday]
 29. Negative test with empty string for ellipsis pipe 
 30. Optimize menu.comp.html to avoid code duplicate
+31. Experiment with async pipe in cart-view.comp.ts -- instead of unsubcribe -- try async pipe 
+32. unit Test the navigateTo method of navigation-helper.ts
 
 
-
-
-  Any to Any Component Communication (2 Hours)
   
 
   Authentication (5-6 Hours)

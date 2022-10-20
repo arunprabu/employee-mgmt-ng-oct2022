@@ -32,11 +32,11 @@ export class CartDataService {
   }
 
   addToCart(product: IProduct){
+    // we should connect with rest api b/e and add the above product -- and implement relevant logic here
     console.log(product);
     // let's work adding this product to existing cart items 
     this.latestCartItems.pipe(take(1)).subscribe(( existingCartItems: IProduct[]) => {
       console.log(existingCartItems);
-
       const updatedCartItems = [...existingCartItems, product];
       this.cartItems.next(updatedCartItems);
     });
