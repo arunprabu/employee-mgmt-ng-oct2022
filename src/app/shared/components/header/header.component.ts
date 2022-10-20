@@ -12,7 +12,8 @@ export class HeaderComponent implements OnInit {
 
   cartCount = 0;
 
-  constructor(public navigationHelper: NavigationHelper, private cartDataService: CartDataService) { }
+  constructor(public navigationHelper: NavigationHelper, 
+    private cartDataService: CartDataService) { }
 
   ngOnInit(): void {
     this.cartDataService.latestCartItems.subscribe( (cartItems: IProduct[]) => {

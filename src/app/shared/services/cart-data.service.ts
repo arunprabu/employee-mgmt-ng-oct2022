@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, take } from 'rxjs';
 import { IProduct } from 'src/app/products/models/iproduct';
 
 @Injectable({
@@ -18,10 +18,10 @@ export class CartDataService {
       category: 'Dairy',
       price: '$6.38'
     }
-  ]
+  ];
   
   // Step 2: Create an Observable. This should also act as Observer . 
-  // It's Subject. Because the Subject should have default cart items, we will choose BehaviourSubject
+  // It's Subject. Because the Subject should have default cart items, so, we will choose BehaviourSubject
   // Let's create an object for BehaviourSubject class with default cart items .
   private cartItems = new BehaviorSubject(this.defaultCartItems);
 
@@ -29,5 +29,16 @@ export class CartDataService {
   latestCartItems: Observable<IProduct[]> = this.cartItems.asObservable();
 
   constructor() {
+  }
+
+  addToCart(product: IProduct){
+    console.log(product);
+    // let's work adding this product to existing cart items 
+    this.latestCartItems.pipe(take(1)).subscribe(( existingCartItems: IProduct[]) => {
+      console.log(existingCartItems);
+
+      const updatedCartItems = [...existingCartItems, product];
+      this.cartItems.next(updatedCartItems);
+    });
   }
 }
