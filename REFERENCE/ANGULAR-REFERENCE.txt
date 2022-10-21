@@ -39,7 +39,7 @@ Building Blocks
   Interfaces /Models  [DONE ]
   Modules [DONE]
   Pipes [DONE]
-  Guards 
+  Guards [DONE]
   Classes [DONE]
   Interceptors 
 
@@ -140,7 +140,17 @@ Feature-wise & Building Block wise Project Structure
         models/
         ...
         ...
-        
+      products/
+        components/
+        services/
+        models/
+        ...
+        ...
+      auth/
+        components/
+          login/
+          signup/ 
+      
 
 Routing 
 ---
@@ -533,3 +543,48 @@ Classes for Model
 ---
   ng g cl Employee  (or)
   ng g cl Employee --type=model   // will get filename with .model.ts 
+
+
+---
+Guards
+---
+  ng g g shared/guards/auth 
+
+
+
+HTTP 
+----
+  * Stateless 
+
+  Browser ===> Server 
+  Browser <=== Server (login )
+  Browser ===> Server 
+  Browser <=== Server (10 mails)
+  Browser ===> Server 
+  Browser <=== Server (mail opened)
+  
+  Authentication in Multiple ways 
+  ---
+    1. Session-Based Authentication ( Traditional Approach)
+        * when the user logs in server will create a session id 
+          * server will save the session id 
+            * server will process response and send the session id to the browser 
+              * browser should save the session id in cookies 
+                * post-login, every subsequent request hitting the server should carry the session id 
+                  * server will compare the session ids 
+                    * if both match then, proper response will be sent 
+                    * else, login again 
+
+    2. Token-Based Authentication (Modern Approach)
+        * when the user logs in server will generate a token 
+          * server will NOT SAVE the token 
+          * server will process response and send the token to the browser 
+            * browser should save the token in either cookies or local storage or session storage 
+              * post-login, every subsequent request hitting the server should carry the token (bearer token)
+                * then, token will be decoded, verified by the server
+                  * if valid, proper response will be sent 
+                  * else, login again 
+
+
+
+

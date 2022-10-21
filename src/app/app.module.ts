@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,9 +22,10 @@ import { CounterComponent } from './unit-testing-demo/components/counter/counter
 import { HighlightDirective } from './unit-testing-demo/directives/highlight.directive';
 import { EmployeesModule } from './employees/employees.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
-import { HttpClientModule } from '@angular/common/http';
 import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
 import { ProductsModule } from './products/products.module';
+import { AuthModule } from './auth/auth.module';
+import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 
 // Main Switching Box
 @NgModule({
@@ -52,10 +54,15 @@ import { ProductsModule } from './products/products.module';
     FormsModule, // for ngModel
     EmployeesModule,
     ProductsModule,
+    AuthModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
+    }
+  ],
   bootstrap: [AppComponent]// AppModule should be bootstrapped with AppComponent
 })
 export class AppModule { }

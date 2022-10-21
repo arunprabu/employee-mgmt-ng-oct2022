@@ -33,12 +33,18 @@
 31. Experiment with async pipe in cart-view.comp.ts -- instead of unsubcribe -- try async pipe 
 32. unit Test the navigateTo method of navigation-helper.ts
 
+Tasks to complete on Tuesday (25th Oct 2022)
+========
+33. Explore Custom Validator
+34. Explore Hierarchical Decorator 
+35. Unit Testing Guards [TODO]
+36. Unit Testing Classes [TODO]
+37. Unit Testing Interceptors [TODO]
+
 
   
 
-  Authentication (5-6 Hours)
-    Guards 
-    Custom Validator
+  Authentication (2 Hours)
     Interceptors 
 
 

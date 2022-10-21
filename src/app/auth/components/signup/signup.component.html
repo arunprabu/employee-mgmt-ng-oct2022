@@ -1,0 +1,76 @@
+<div class="row">
+  <!--step-3 patchup form tag with the FormGroup in ts -->
+  <form class="col-md-6 offset-md-3" [formGroup]="signUpForm" 
+    (ngSubmit)="handleSignUpForm()"> <!-- step 7: work on submission flow -->
+    <h1 class="h3 mb-3 fw-normal">Please Signup</h1>
+    <div class="form-floating">
+      <!--step-4 patchup form fields with the FormControl in ts -->
+      <input type="email" class="form-control" id="floatingInput"  
+      placeholder="name@example.com" formControlName="email"
+      [ngClass]="{
+        'is-invalid':
+          signUpForm.get('email')?.touched &&
+          signUpForm.get('email')?.invalid
+      }">
+      <label for="floatingInput">Email address</label>
+      <!-- validations for email -->
+      <div class="invalid-feedback">
+        <!--step-6 displaying validation related msg -->
+        <div *ngIf="signUpForm.get('email')?.errors?.['required']">
+          Email is required
+        </div>
+        <div *ngIf="signUpForm.get('email')?.errors?.['email']">
+          Email is invalid
+        </div>
+      </div>
+    </div>
+ 
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" 
+      placeholder="Password" name="password" formControlName="password"
+      [ngClass]="{
+        'is-invalid':
+          signUpForm.get('password')?.touched &&
+          signUpForm.get('password')?.invalid
+      }">
+      <label for="floatingPassword">Password</label>
+      <!-- validations for password -->
+      <div class="invalid-feedback">
+        <!-- displaying validation related msg -->
+        <div *ngIf="signUpForm.get('password')?.errors?.['required']">
+          Password is required
+        </div>
+        <div *ngIf="signUpForm.get('password')?.errors?.['minlength']">
+          Password should have minimum 6 characters
+        </div>
+      </div>
+    </div>
+ 
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword1" 
+      placeholder="Confirm Password"  formControlName="confirmPassword"
+      [ngClass]="{
+        'is-invalid':
+          signUpForm.get('confirmPassword')?.touched &&
+          signUpForm.get('confirmPassword')?.invalid
+      }">
+      <label for="floatingPassword1">Confirm Password</label>
+      <!-- validations for confirm password -->
+      <div class="invalid-feedback">
+        <!-- displaying validation related msg -->
+        <div *ngIf="signUpForm.get('confirmPassword')?.errors?.['required']">
+          Confirm Password is required
+        </div>
+        <div *ngIf="signUpForm.get('confirmPassword')?.errors?.['minlength']">
+          Confirm Password should have minimum 6 characters
+        </div>
+      </div>
+    </div>
+ 
+    <!-- disabling the submit button in case of error -->
+    <button class="w-100 btn btn-lg btn-primary" type="submit" [disabled]="signUpForm.invalid">Signup</button>
+    <div class="mt-3">
+      <p>Already Registered?</p><a routerLink="/auth/login">Login Now </a>
+    </div>
+  </form>
+</div>
