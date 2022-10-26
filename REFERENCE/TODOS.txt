@@ -33,24 +33,31 @@
 31. Experiment with async pipe in cart-view.comp.ts -- instead of unsubcribe -- try async pipe 
 32. unit Test the navigateTo method of navigation-helper.ts
 
-Tasks to complete on Tuesday (25th Oct 2022)
+Tasks to be completed on Tuesday (25th Oct 2022)
 ========
-33. Explore Custom Validator
+33. Explore Custom Validator  
+    Implement one or two custom validator in login or signup components 
 34. Explore Hierarchical Decorator 
+    Refer: https://docs.w3cub.com/angular/guide/hierarchical-dependency-injection.html
 35. Unit Testing Guards [TODO]
-36. Unit Testing Classes [TODO]
+36. Explore Unit Testing Classes
 37. Unit Testing Interceptors [TODO]
+38. Explore RxJS Operators -- switchMap, forkJoin  
+39. Explore Response Interceptors
+40. Work on Logout -- hide Login and Signup upon successful login and show Logout 
+41. Explore Auto-Login, Auto-Logout
 
 
-  
 
-  Authentication (2 Hours)
-    Interceptors 
+Project #2 
+  Managing Multiple Projects in One Folder
+  Angular Libraries
 
-
+Project #3
+---
   NgRx (max 5 hours)
 
-  ---
+---
   Nice to have topics 
 
 

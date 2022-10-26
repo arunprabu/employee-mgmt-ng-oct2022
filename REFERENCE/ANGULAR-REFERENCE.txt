@@ -41,7 +41,7 @@ Building Blocks
   Pipes [DONE]
   Guards [DONE]
   Classes [DONE]
-  Interceptors 
+  Interceptors [DONE]
 
 ---
 
