@@ -13,6 +13,10 @@ const routes: Routes = [
   { path: 'concepts', component: ConceptsComponent },
   { path: 'about', component: AboutComponent, canActivate: [ AuthGuard ] },
   { path: 'unit-testing', component: UnitTestingDemoComponent, canActivate: [AuthGuard] },
+  {
+    path: 'employees',
+    loadChildren: () => import('./employees/employees.module').then(m => m.EmployeesModule)
+  },
   { path: '**', component: PageNotFoundComponent }
 ];
 

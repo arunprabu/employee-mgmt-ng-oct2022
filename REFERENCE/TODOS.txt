@@ -35,9 +35,9 @@
 
 Tasks to be completed on Tuesday (25th Oct 2022)
 ========
-33. Explore Custom Validator  
+33. Explore Custom Validator
     Implement one or two custom validator in login or signup components 
-34. Explore Hierarchical Decorator 
+34. Explore Hierarchical Injector 
     Refer: https://docs.w3cub.com/angular/guide/hierarchical-dependency-injection.html
 35. Unit Testing Guards [TODO]
 36. Explore Unit Testing Classes
@@ -45,8 +45,7 @@ Tasks to be completed on Tuesday (25th Oct 2022)
 38. Explore RxJS Operators -- switchMap, forkJoin  
 39. Explore Response Interceptors
 40. Work on Logout -- hide Login and Signup upon successful login and show Logout 
-41. Explore Auto-Login, Auto-Logout
-
+41. Auto-Login, Auto-Logout (after some time elapses, after logging out in one tab also)
 
 
 Project #2 

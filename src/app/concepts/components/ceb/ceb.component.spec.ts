@@ -10,7 +10,7 @@ describe('CebComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ CebComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

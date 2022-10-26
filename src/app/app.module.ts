@@ -52,7 +52,6 @@ import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
   imports: [
     BrowserModule,  
     FormsModule, // for ngModel
-    EmployeesModule,
     ProductsModule,
     AuthModule,
     AppRoutingModule,
