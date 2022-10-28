@@ -12,7 +12,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
   constructor() {}
 
-  // will intercept all the suqsequent requests that hit the REST API (post-login)
+  // will intercept all the  requests that hit the REST API
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     console.log(request); // original http request
 

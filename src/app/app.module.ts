@@ -20,7 +20,6 @@ import { UnlessDirective } from './concepts/directives/unless.directive';
 import { UnitTestingDemoComponent } from './unit-testing-demo/components/unit-testing-demo/unit-testing-demo.component';
 import { CounterComponent } from './unit-testing-demo/components/counter/counter.component';
 import { HighlightDirective } from './unit-testing-demo/directives/highlight.directive';
-import { EmployeesModule } from './employees/employees.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
 import { ProductsModule } from './products/products.module';

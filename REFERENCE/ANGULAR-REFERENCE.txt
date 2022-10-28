@@ -64,13 +64,13 @@ Concepts
     Classes [TODO]
     Interceptors [TODO]
 
-  Internationalization (i18n)
-  ng animations 
-  angular material 
+  Internationalization (i18n)  [DONE]
+  ng animations [DONE]
+  angular material  [DONE]
   
 --
 
-NgRx - Framework 
+NgRx - Framework  [DONE]
 ---
 
 
@@ -533,7 +533,7 @@ Pipes
   2. Impure Pipes 
 
 ----
-Interfaces  for models 
+Interfaces for models 
 --
   ng g interface Employee  (or)
   ng g interface IEmployee (or)
@@ -640,9 +640,4 @@ Steps:
 
   Step 3: 
     localize the app 
-
-http://example.com?lang=en-US 
-http://example.com?lang=en-UK 
-http://example.com?lang=en-CA
-http://example.com?lang=en-IN
-http://example.com?lang=en-AU
+abo
