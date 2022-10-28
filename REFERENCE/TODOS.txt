@@ -32,34 +32,30 @@
 30. Optimize menu.comp.html to avoid code duplicate
 31. Experiment with async pipe in cart-view.comp.ts -- instead of unsubcribe -- try async pipe 
 32. unit Test the navigateTo method of navigation-helper.ts
-
-Tasks to be completed on Tuesday (25th Oct 2022)
-========
 33. Explore Custom Validator
     Implement one or two custom validator in login or signup components 
-34. Explore Hierarchical Injector 
-    Refer: https://docs.w3cub.com/angular/guide/hierarchical-dependency-injection.html
-35. Unit Testing Guards [TODO]
-36. Explore Unit Testing Classes
-37. Unit Testing Interceptors [TODO]
-38. Explore RxJS Operators -- switchMap, forkJoin  
-39. Explore Response Interceptors
-40. Work on Logout -- hide Login and Signup upon successful login and show Logout 
-41. Auto-Login, Auto-Logout (after some time elapses, after logging out in one tab also)
+34. Unit Testing Guards 
+35. Unit Testing Class
+36. Unit Testing Interceptor
+37. Work on Logout -- hide Login and Signup upon successful login and show Logout 
+38. Auto-Login, Auto-Logout (after some time elapses, after logging out in one tab also)
+39. Implement Lazy loading for ProductsModule, AuthModule 
+40. Routing Animations 
 
 
-Project #2 
-  Managing Multiple Projects in One Folder
-  Angular Libraries
-
-Project #3
+More Reference 
 ---
-  NgRx (max 5 hours)
+Explore Hierarchical Injector 
+  Refer: https://docs.w3cub.com/angular/guide/hierarchical-dependency-injection.html
 
----
-  Nice to have topics 
+Explore RxJS Operators -- switchMap, forkJoin
+  Refer: https://www.learnrxjs.io/learn-rxjs/operators/transformation/switchmap
+  Refer: https://www.learnrxjs.io/learn-rxjs/operators/combination/forkjoin
 
-
+Explore Response Interceptors
+  Refer: https://angular.io/api/common/http/HttpInterceptor
+  Refer: https://javascript.plainenglish.io/angular-interceptors-a-complete-guide-7294e2317ecf
+  
 
 
 

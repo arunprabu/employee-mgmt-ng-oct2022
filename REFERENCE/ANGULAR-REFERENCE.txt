@@ -587,4 +587,62 @@ HTTP
 
 
 
+Build & Deployment 
+  ng build 
 
+  Build checklist 
+    1. remove all console logs
+    2. ng lint to see 0 errors 
+
+    ng build 
+
+    after deployment 
+    ---
+      click all links in your app. 
+      check console for errors 
+
+--
+Internationalization (i18n)
+---
+  is the process of designing and preparing your project for use in different locales around the world. 
+
+  * separating content for translation 
+  * updating app to support bidirection text (both LTR and RTL)
+  
+
+  en 
+  es 
+  fr 
+  ta 
+  ru 
+  de 
+
+--
+Localization (l10n)
+--
+  is the process of building versions of your project for different locales. 
+
+  
+  US
+  UK
+  CA 
+  IN 
+  AU 
+
+The above has to be done without changing app's code 
+Steps:
+--
+  Step 1: 
+    install dependencies (use @angular/localize library)
+
+  Step 2: 
+    internationalize the app 
+
+  Step 3: 
+    localize the app 
+
+http://example.com?lang=en-US 
+http://example.com?lang=en-UK 
+http://example.com?lang=en-CA
+http://example.com?lang=en-IN
+http://example.com?lang=en-AU
