@@ -31,7 +31,6 @@ export class AboutComponent implements OnInit {
     this.label = 'outside';
     this.progress = 0;
     this._ngZone.runOutsideAngular(() => {
-      debugger;
       this._increaseProgress(() => {
         // reenter the Angular zone and display done
         this._ngZone.run(() => { console.log('Outside Done!'); });
