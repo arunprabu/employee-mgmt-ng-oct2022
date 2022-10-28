@@ -592,7 +592,8 @@ Build & Deployment
 
   Build checklist 
     1. remove all console logs
-    2. ng lint to see 0 errors 
+    2. remove debugger; keyword from code
+    3. ng lint to see 0 errors 
 
     ng build 
 
