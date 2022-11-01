@@ -636,9 +636,30 @@ Steps:
   Step 1: 
     install dependencies (use @angular/localize library)
 
+    ng add @angular/localize@13.3.11
+
   Step 2: 
     internationalize the app 
 
+    Mark elements with i18n in html 
+    Then,
+    ng extract-i18n --output-path src/locale  
+    
   Step 3: 
+    refer angular.json 
+
+  Step 4: 
     localize the app 
-abo
+
+    refer src/locale folder 
+
+  Step 5: 
+    refer package.json for ng serve setup for multiple languages 
+    then,
+    ng serve ng serve --configuration=fr
+
+
+
+
+
+ 

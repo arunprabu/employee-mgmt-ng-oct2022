@@ -1,13 +1,29 @@
 <div>
-  <h1>{{featureName}}</h1>
+  <h1>{{ featureName }}</h1>
 
   <app-calc></app-calc>
 
   <h2>Demo: NgZone</h2>
 
-  <p>Progress: {{progress}}%</p>
-  <p *ngIf="progress >= 100">Done processing {{label}} of Angular zone!</p>
+  <p>Progress: {{ progress }}%</p>
+  <p *ngIf="progress >= 100">Done processing {{ label }} of Angular zone!</p>
 
-  <button (click)="processWithinAngularZone()">Process within Angular zone</button>
-  <button (click)="processOutsideOfAngularZone()">Process outside of Angular zone</button>
+  <button (click)="processWithinAngularZone()">
+    Process within Angular zone
+  </button>
+  <button (click)="processOutsideOfAngularZone()">
+    Process outside of Angular zone
+  </button>
+
+  <hr />
+  <h2>i18n Demo</h2>
+  <p>npm i @angular/localize@13.3.11</p>
+  <div class="container-fluid">
+    <div class="row">
+      <h1 style="color: blue" i18n>Hello i18n!</h1>
+      <h1 style="color: blue" i18n="header">Introduction to Angular Translation</h1>
+      <h1 style="color: blue" i18n="@@country">India</h1>
+    </div>
+  </div>
+
 </div>

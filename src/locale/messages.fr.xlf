@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4150330030790364157" datatype="html">
+        <source>Hello!</source>
+        <target>Bonjour!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/components/about.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="391127250570658965" datatype="html">
+        <source>Introduction to Angular Translation</source>
+        <target>Introduction à la traduction angulaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/components/about.component.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+        <note priority="1" from="description">header</note>
+      </trans-unit>
+      <trans-unit id="country" datatype="html">
+        <source>India</source>
+        <target>Inde</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/components/about.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

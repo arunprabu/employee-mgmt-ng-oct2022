@@ -13,6 +13,23 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {  
+        "sourceLocale": "en-US",  
+        "locales": {  
+          "en": {  
+            "translation": "src/locale/messages.xlf"  
+          },  
+          "es": {  
+            "translation": "src/locale/messages.es.xlf"  
+          },  
+          "ta": {  
+            "translation": "src/locale/messages.ta.xlf"  
+          },  
+          "fr": {  
+            "translation": "src/locale/messages.fr.xlf"  
+          }  
+        }  
+      },   
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -22,6 +39,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "localize":true ,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -63,7 +81,19 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
-            }
+            },
+            "en": {  
+              "localize": ["en"]  
+            },  
+            "es": {  
+              "localize": ["es"]  
+            },  
+            "ta": {  
+              "localize": ["ta"]  
+            },  
+            "fr": {  
+              "localize": ["fr"]  
+            }  
           },
           "defaultConfiguration": "production"
         },
@@ -72,6 +102,18 @@
           "configurations": {
             "production": {
               "browserTarget": "employee-mgmt-ng-oct2022:build:production"
+            },
+            "en": {  
+              "browserTarget": "employee-mgmt-ng-oct2022:build:en"  
+            },  
+            "es": {  
+              "browserTarget": "employee-mgmt-ng-oct2022:build:es"  
+            },  
+            "ta": {  
+              "browserTarget": "employee-mgmt-ng-oct2022:build:ta"  
+            },  
+            "fr": {  
+              "browserTarget": "employee-mgmt-ng-oct2022:build:fr"  
             },
             "development": {
               "browserTarget": "employee-mgmt-ng-oct2022:build:development"
