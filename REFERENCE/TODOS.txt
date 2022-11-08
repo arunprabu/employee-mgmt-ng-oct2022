@@ -2,7 +2,7 @@
 2. implement 'conditional content projection in angular' / conditional transclusion / multi-slot content projection 
     display login and signup in header as last menu items 
     display back to top in footer as first menu item 
-3. implement active menu in menu.comp.html
+3. implement active menu in menu.comp.html 
 4. implement child to parent comp communication using @ViewChild()
 5. explore style binding in angular [ngStyle]
 6. explore *ngIf with else 
@@ -29,17 +29,17 @@
 27. Explore @ContentChild 
 28. Page Title should be implemented in Angular App for all urls [Try it out on Tuesday/Wednesday]
 29. Negative test with empty string for ellipsis pipe 
-30. Optimize menu.comp.html to avoid code duplicate
+30. Optimize menu.comp.html to avoid code duplicate [Ruchi] 
 31. Experiment with async pipe in cart-view.comp.ts -- instead of unsubcribe -- try async pipe 
 32. Experiment with Custom Validator
     Implement one or two custom validator in login or signup components 
-33. Unit Testing Guards 
-34. Unit Testing Class (unit Test the navigateTo method of navigation-helper.ts)
-35. Unit Testing Interceptor
+33. Unit Testing Guards  [Ruchi] [DONE]
+34. Unit Testing Class [Ruchi] (unit Test the navigateTo method of navigation-helper.ts)
+35. Unit Testing Interceptor [Ruchi] - NOT GOOD 
 36. Work on Logout -- hide Login and Signup upon successful login and show Logout 
 37. Auto-Login, Auto-Logout (after some time elapses, after logging out in one tab also)
 38. Implement Lazy loading for ProductsModule, AuthModule 
-39. Routing Animations 
+39. Routing Animations [Ruchi] [DONE]
 40. implement i18n for about page 
 
 

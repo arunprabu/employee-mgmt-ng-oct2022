@@ -1,21 +1,14 @@
+Submission Checklist
+--
+  1. remove irrelevant/unnecessary console.log 
+  2. check for linting errors 
+      ng lint 
+  3. generate code coverage report
+      ng test --code-coverage 
+  4. take a build 
+      ng build 
 
-
-Give complex todos next week
-have break out rooms for todos 
-
-recap for 1 hour at the end of the the training 
-  -- ask the participants to give recap 
-
-
-
-1. More Time for Todos 
-2. Complex Todos 
-3. Peer Review 
-4. Break-out rooms for Todos (4 Groups)
-5. Unit Testing (60-70%)
-6. Revise Concepts 
-
--------
-
-
-
+  5. ignore node_modules, .angular, .git, .vscode 
+  6. and then, zip the project 
+  7. upload the project 
+  
